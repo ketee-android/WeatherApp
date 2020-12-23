@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Weather_Application</string>
+    <string name="day_weather">°C днем</string>
+    <string name="night_weather">°C ночью</string>
+</resources>
