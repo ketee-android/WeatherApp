@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="switch_button">Dark theme</string>
+    <string name="switchThemeView">Dark theme</string>
 </resources>

@@ -1,10 +1,10 @@
 <resources>
-    <string name="app_name" translatable="false">Weather App</string>
-    <string name="day_weather">°C днем</string>
-    <string name="night_weather">°C ночью</string>
-    <string name="switch_button">Светлая тема</string>
-    <string name="set_city_button">ОК</string>
-    <string name="edit_text">Введите название города</string>
-    <string name="set_date">Выберите дату</string>
-    <string name="en_ru_button" translatable="false">Русский</string>
+    <string name="appName" translatable="false">Weather App</string>
+    <string name="dayWeather">°C днем</string>
+    <string name="nightWeather">°C ночью</string>
+    <string name="switchThemeView">Светлая тема</string>
+    <string name="setCityButton">ОК</string>
+    <string name="editText">Введите название города</string>
+    <string name="setDate">Выберите дату</string>
+    <string name="chLangButton" translatable="false">Русский</string>
 </resources>

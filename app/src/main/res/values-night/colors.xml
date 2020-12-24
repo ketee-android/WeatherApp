@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="background_color">#FF15112B</color>
-    <color name="button_color">#FF6200EE</color>
-    <color name="button_highlight">#FF4800AE</color>
-    <color name="text_color">#FFFFFF</color>
+    <color name="backgroundColor">#FF15112B</color>
+    <color name="buttonColor">#FF6200EE</color>
+    <color name="buttonHighlight">#FF4800AE</color>
+    <color name="textColor">#FFFFFF</color>
 </resources>
