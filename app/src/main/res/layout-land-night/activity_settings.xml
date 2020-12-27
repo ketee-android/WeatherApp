@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    tools:context=".SettingsActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="3dp"
+            tools:layout_editor_absoluteY="5dp">
+
+            <TextView
+                android:id="@+id/settingsScreenName"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="#FFFFFF"
+                android:backgroundTint="@color/button_color"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center"
+                android:text="@string/settings_screen_name"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="@color/text_color"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/setThemeView"
+                android:layout_width="280dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="4dp"
+                android:fontFamily="sans-serif-condensed-light"
+                android:gravity="center"
+                android:text="@string/set_theme"
+                android:textAlignment="viewStart"
+                android:textColor="@color/text_color"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/setLanguageView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.035"
+                app:layout_constraintStart_toStartOf="@+id/settingsScreenName"
+                app:layout_constraintTop_toTopOf="@+id/setLanguageView"
+                app:layout_constraintVertical_bias="0.047"
+                tools:ignore="RtlCompat" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupThemes"
+                android:layout_width="280dp"
+                android:layout_marginTop="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@+id/setThemeView"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/setThemeView"
+                app:layout_constraintTop_toBottomOf="@+id/setThemeView">
+
+                <RadioButton
+                    android:id="@+id/radioButtonDarkTheme"
+                    android:layout_width="180dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="12dp"
+                    android:buttonTint="@color/text_color"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:text="@string/dark_theme"
+                    android:textColor="@color/text_color"
+                    android:textColorHint="@color/text_color"
+                    android:textColorLink="@color/text_color"
+                    android:textSize="14sp"
+                    tools:layout_editor_absoluteX="35dp"
+                    tools:layout_editor_absoluteY="130dp" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonLightTheme"
+                    android:layout_width="180dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="12dp"
+                    android:buttonTint="@color/text_color"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:text="@string/light_theme"
+                    android:textColor="@color/text_color"
+                    android:textColorHint="@color/text_color"
+                    android:textColorLink="@color/text_color"
+                    android:textSize="14sp"
+                    tools:layout_editor_absoluteX="35dp"
+                    tools:layout_editor_absoluteY="195dp" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/setLanguageView"
+                android:layout_width="280dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif-condensed-light"
+                android:gravity="center"
+                android:text="@string/set_language"
+                android:textAlignment="viewStart"
+                android:textColor="@color/text_color"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/settingsScreenName"
+                app:layout_constraintHorizontal_bias="0.894"
+                app:layout_constraintStart_toEndOf="@+id/setThemeView"
+                app:layout_constraintTop_toBottomOf="@+id/settingsScreenName"
+                tools:ignore="RtlCompat" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupLanguage"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@+id/setLanguageView"
+                app:layout_constraintStart_toStartOf="@+id/setLanguageView"
+                app:layout_constraintTop_toBottomOf="@+id/setLanguageView">
+
+                <RadioButton
+                    android:id="@+id/radioButtonRussianLang"
+                    android:layout_width="180dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="12dp"
+                    android:buttonTint="@color/text_color"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:text="@string/ru_language"
+                    android:textColor="@color/text_color"
+                    android:textColorHint="@color/text_color"
+                    android:textColorLink="@color/text_color"
+                    android:textSize="14sp"
+                    tools:layout_editor_absoluteX="35dp"
+                    tools:layout_editor_absoluteY="130dp" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonEnglishLang"
+                    android:layout_width="180dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="12dp"
+                    android:buttonTint="@color/text_color"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:text="@string/en_language"
+                    android:textColor="@color/text_color"
+                    android:textColorHint="@color/text_color"
+                    android:textColorLink="@color/text_color"
+                    android:textSize="14sp"
+                    tools:layout_editor_absoluteX="35dp"
+                    tools:layout_editor_absoluteY="195dp" />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/aboutButton"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:backgroundTint="@color/background_color"
+                android:backgroundTintMode="src_atop"
+                android:fontFamily="sans-serif-condensed-light"
+                android:onClick="onClickAboutButton"
+                android:text="@string/about"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/text_color"
+                android:textColorHighlight="@color/button_highlight_color"
+                android:textColorHint="@android:color/background_dark"
+                android:textColorLink="@color/purple_200"
+                android:textCursorDrawable="@color/text_color"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/okButtonSettings"
+                app:layout_constraintEnd_toEndOf="@+id/setLanguageView"
+                app:layout_constraintHorizontal_bias="0.555"
+                app:layout_constraintStart_toStartOf="@+id/setThemeView"
+                app:layout_constraintTop_toBottomOf="@+id/settingsScreenName"
+                app:layout_constraintVertical_bias="0.701" />
+
+            <Button
+                android:id="@+id/okButtonSettings"
+                android:layout_width="88dp"
+                android:layout_height="49dp"
+                android:layout_marginLeft="12dp"
+                android:backgroundTint="@color/button_color"
+                android:backgroundTintMode="src_atop"
+                android:fontFamily="sans-serif-condensed"
+                android:onClick="onClickOkButtonSettings"
+                android:text="@string/ok_button"
+                android:textColor="@color/text_color"
+                android:textColorHighlight="@color/button_highlight_color"
+                android:textColorLink="@color/purple_200"
+                android:textCursorDrawable="@color/text_color"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/aboutView"
+                app:layout_constraintVertical_bias="0.955" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
