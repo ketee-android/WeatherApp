@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    tools:context=".SetCityActivity">
+
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:ignore="MissingConstraints">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="3dp"
+        tools:layout_editor_absoluteY="5dp">
+
+      <TextView
+          android:id="@+id/setCityScreenName"
+          android:layout_width="match_parent"
+          android:layout_height="55dp"
+          android:background="#FFFFFF"
+          android:backgroundTint="@color/button_color"
+          android:fontFamily="sans-serif-condensed-medium"
+          android:gravity="center"
+          android:text="@string/set_city_screen_name"
+          android:textAlignment="center"
+          android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+          android:textColor="@color/text_color"
+          android:textSize="24sp" />
+
+      <EditText
+          android:id="@+id/setCityEditText"
+          android:layout_width="268dp"
+          android:layout_height="49dp"
+          android:layout_marginTop="24dp"
+          android:layout_marginBottom="24dp"
+          android:layout_marginLeft="12dp"
+          android:fontFamily="sans-serif-condensed-light"
+          android:hint="@string/set_city_text_edit"
+          android:textColor="@color/text_color"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/setCityScreenName"
+          app:layout_constraintVertical_bias="0.02" />
+
+      <TextView
+          android:id="@+id/setPapameters"
+          android:layout_width="match_parent"
+          android:layout_height="55dp"
+          android:background="#FFFFFF"
+          android:backgroundTint="@color/button_color"
+          android:fontFamily="sans-serif-condensed-medium"
+          android:gravity="center"
+          android:text="@string/set_parameters"
+          android:textAlignment="center"
+          android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+          android:textColor="@color/text_color"
+          android:textSize="24sp"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="@+id/setCityScreenName"
+          app:layout_constraintHorizontal_bias="0.476"
+          app:layout_constraintStart_toStartOf="@+id/setCityScreenName"
+          app:layout_constraintTop_toBottomOf="@+id/setCityEditText"
+          app:layout_constraintVertical_bias="0.052" />
+
+      <CheckBox
+          android:id="@+id/checkBoxPressure"
+          android:layout_width="250dp"
+          android:layout_height="45dp"
+          android:layout_marginTop="24dp"
+          android:layout_marginLeft="12dp"
+          android:buttonTint="@color/text_color"
+          android:fontFamily="sans-serif-condensed-light"
+          android:text="@string/check_box_pressure"
+          android:textColor="@color/text_color"
+          android:textSize="18sp"
+          app:layout_constraintStart_toStartOf="@+id/setCityEditText"
+          app:layout_constraintTop_toBottomOf="@+id/setPapameters" />
+
+      <CheckBox
+          android:id="@+id/checkBoxWindSpeed"
+          android:layout_width="250dp"
+          android:layout_height="45dp"
+          android:layout_marginTop="12dp"
+          android:layout_marginLeft="12dp"
+          android:layout_marginBottom="24dp"
+          android:buttonTint="@color/text_color"
+          android:fontFamily="sans-serif-condensed-light"
+          android:text="@string/check_box_wind_speed"
+          android:textColor="@color/text_color"
+          android:textSize="18sp"
+          app:layout_constraintEnd_toEndOf="@+id/checkBoxPressure"
+          app:layout_constraintHorizontal_bias="0.0"
+          app:layout_constraintStart_toStartOf="@+id/checkBoxPressure"
+          app:layout_constraintTop_toBottomOf="@+id/checkBoxPressure" />
+
+      <TextView
+          android:id="@+id/listOfCities"
+          android:layout_width="match_parent"
+          android:layout_height="55dp"
+          android:background="#FFFFFF"
+          android:backgroundTint="@color/button_color"
+          android:fontFamily="sans-serif-condensed-medium"
+          android:gravity="center"
+          android:text="@string/list_of_cities"
+          android:textAlignment="center"
+          android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+          android:textColor="@color/text_color"
+          android:textSize="24sp"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintHorizontal_bias="0.5"
+          app:layout_constraintStart_toStartOf="@+id/setPapameters"
+          app:layout_constraintTop_toBottomOf="@+id/checkBoxWindSpeed"
+          app:layout_constraintVertical_bias="0.056" />
+
+      <RadioGroup
+          android:id="@+id/radioGroupCities"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_marginLeft="12dp"
+          android:layout_marginBottom="24dp"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="@+id/listOfCities"
+          app:layout_constraintHorizontal_bias="0.5"
+          app:layout_constraintStart_toStartOf="@+id/listOfCities"
+          app:layout_constraintTop_toBottomOf="@+id/listOfCities"
+          app:layout_constraintVertical_bias="0.0">
+
+        <RadioButton
+            android:id="@+id/radioButtonMoscow"
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="@string/radio_button_moscow"
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/text_color"
+            android:textColorLink="@color/text_color"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.14"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/listOfCities"
+            app:layout_constraintVertical_bias="0.002" />
+
+        <RadioButton
+            android:id="@+id/radioButtonPetersburg"
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="@string/radio_button_petersburg"
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/text_color"
+            android:textColorLink="@color/text_color"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/radioButtonMoscow"
+            app:layout_constraintStart_toStartOf="@+id/radioButtonMoscow"
+            app:layout_constraintTop_toBottomOf="@+id/radioButtonMoscow" />
+
+        <RadioButton
+            android:id="@+id/radioButtonAnapa"
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="@string/radio_button_anapa"
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/text_color"
+            android:textColorLink="@color/text_color"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/radioButtonPetersburg"
+            app:layout_constraintStart_toStartOf="@+id/radioButtonPetersburg"
+            app:layout_constraintTop_toBottomOf="@+id/radioButtonPetersburg" />
+
+        <RadioButton
+            android:id="@+id/radioButtonKazan"
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="@string/radio_button_kazan"
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/text_color"
+            android:textColorLink="@color/text_color"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/radioButtonEkaterinburg"
+            app:layout_constraintStart_toStartOf="@+id/radioButtonEkaterinburg"
+            app:layout_constraintTop_toBottomOf="@+id/radioButtonEkaterinburg" />
+
+        <RadioButton
+            android:id="@+id/radioButtonKaliningrad"
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="@string/radio_button_kaliningrad"
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/text_color"
+            android:textColorLink="@color/text_color"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/radioButtonKazan"
+            app:layout_constraintStart_toStartOf="@+id/radioButtonKazan"
+            app:layout_constraintTop_toBottomOf="@+id/radioButtonKazan" />
+
+        <RadioButton
+            android:id="@+id/radioButtonVladivostok"
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="@string/radio_button_vladivostok"
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/text_color"
+            android:textColorLink="@color/text_color"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/radioButtonAnapa"
+            app:layout_constraintStart_toStartOf="@+id/radioButtonAnapa"
+            app:layout_constraintTop_toBottomOf="@+id/radioButtonAnapa" />
+
+        <RadioButton
+            android:id="@+id/radioButtonVladimir"
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="@string/radio_button_vladimir"
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/text_color"
+            android:textColorLink="@color/text_color"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/radioButtonVladivostok"
+            app:layout_constraintStart_toStartOf="@+id/radioButtonVladivostok"
+            app:layout_constraintTop_toBottomOf="@+id/radioButtonVladivostok" />
+
+        <RadioButton
+            android:id="@+id/radioButtonVolgograd"
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="@string/radio_button_volgograd"
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/text_color"
+            android:textColorLink="@color/text_color"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/radioButtonVladimir"
+            app:layout_constraintStart_toStartOf="@+id/radioButtonVladimir"
+            app:layout_constraintTop_toBottomOf="@+id/radioButtonVladimir" />
+
+        <RadioButton
+            android:id="@+id/radioButtonVoronezh"
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="@string/radio_button_voronezh"
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/text_color"
+            android:textColorLink="@color/text_color"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/radioButtonVolgograd"
+            app:layout_constraintStart_toStartOf="@+id/radioButtonVolgograd"
+            app:layout_constraintTop_toBottomOf="@+id/radioButtonVolgograd" />
+
+        <RadioButton
+            android:id="@+id/radioButtonEkaterinburg"
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="@string/radio_button_ekaterinburg"
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/text_color"
+            android:textColorLink="@color/text_color"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/radioButtonVoronezh"
+            app:layout_constraintStart_toStartOf="@+id/radioButtonVoronezh"
+            app:layout_constraintTop_toBottomOf="@+id/radioButtonVoronezh" />
+
+        <RadioButton
+            android:id="@+id/radioButtonNizhniyNovgorod"
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="@string/radio_button_nizhniy_novgorod"
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/text_color"
+            android:textColorLink="@color/text_color"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/radioButtonKaliningrad"
+            app:layout_constraintStart_toStartOf="@+id/radioButtonKaliningrad"
+            app:layout_constraintTop_toBottomOf="@+id/radioButtonKaliningrad" />
+
+        <RadioButton
+            android:id="@+id/radioButtonNovosibirsk"
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="@string/radio_button_novosibirsk"
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/text_color"
+            android:textColorLink="@color/text_color"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/radioButtonNizhniyNovgorod"
+            app:layout_constraintStart_toStartOf="@+id/radioButtonNizhniyNovgorod"
+            app:layout_constraintTop_toBottomOf="@+id/radioButtonNizhniyNovgorod" />
+
+        <RadioButton
+            android:id="@+id/radioButtonSochi"
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="@string/radio_button_sochi"
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/text_color"
+            android:textColorLink="@color/text_color"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/radioButtonSamara"
+            app:layout_constraintStart_toStartOf="@+id/radioButtonSamara"
+            app:layout_constraintTop_toBottomOf="@+id/radioButtonSamara" />
+
+        <RadioButton
+            android:id="@+id/radioButtonOmsk"
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="@string/radio_button_omsk"
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/text_color"
+            android:textColorLink="@color/text_color"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/radioButtonNovosibirsk"
+            app:layout_constraintStart_toStartOf="@+id/radioButtonNovosibirsk"
+            app:layout_constraintTop_toBottomOf="@+id/radioButtonNovosibirsk" />
+
+        <RadioButton
+            android:id="@+id/radioButtonRostovNaDonu"
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="@string/radio_button_rostov_na_donu"
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/text_color"
+            android:textColorLink="@color/text_color"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/radioButtonOmsk"
+            app:layout_constraintStart_toStartOf="@+id/radioButtonOmsk"
+            app:layout_constraintTop_toBottomOf="@+id/radioButtonOmsk" />
+
+        <RadioButton
+            android:id="@+id/radioButtonSamara"
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="@string/radio_button_samara"
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/text_color"
+            android:textColorLink="@color/text_color"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/radioButtonRostovNaDonu"
+            app:layout_constraintStart_toStartOf="@+id/radioButtonRostovNaDonu"
+            app:layout_constraintTop_toBottomOf="@+id/radioButtonRostovNaDonu" />
+
+        <RadioButton
+            android:id="@+id/radioButtonSuzdal"
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="@string/radio_button_suzdal"
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/text_color"
+            android:textColorLink="@color/text_color"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/radioButtonSochi"
+            app:layout_constraintStart_toStartOf="@+id/radioButtonSochi"
+            app:layout_constraintTop_toBottomOf="@+id/radioButtonSochi" />
+
+        <RadioButton
+            android:id="@+id/radioButtonTver"
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="@string/radio_button_tver"
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/text_color"
+            android:textColorLink="@color/text_color"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/radioButtonSuzdal"
+            app:layout_constraintStart_toStartOf="@+id/radioButtonSuzdal"
+            app:layout_constraintTop_toBottomOf="@+id/radioButtonSuzdal" />
+
+        <RadioButton
+            android:id="@+id/radioButtonUfa"
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="@string/radio_button_ufa"
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/text_color"
+            android:textColorLink="@color/text_color"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/radioButtonTver"
+            app:layout_constraintStart_toStartOf="@+id/radioButtonTver"
+            app:layout_constraintTop_toBottomOf="@+id/radioButtonTver" />
+
+        <RadioButton
+            android:id="@+id/radioButtonYaroslavl"
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="@string/radio_button_yaroslavl"
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/text_color"
+            android:textColorLink="@color/text_color"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/radioButtonUfa"
+            app:layout_constraintStart_toStartOf="@+id/radioButtonUfa"
+            app:layout_constraintTop_toBottomOf="@+id/radioButtonUfa" />
+      </RadioGroup>
+
+      <Button
+          android:id="@+id/okButtonSetCity"
+          android:layout_width="88dp"
+          android:layout_height="49dp"
+          android:layout_marginBottom="24dp"
+          android:layout_marginLeft="12dp"
+          android:backgroundTint="@color/button_color"
+          android:backgroundTintMode="src_atop"
+          android:fontFamily="sans-serif-condensed"
+          android:text="@string/ok_button"
+          android:onClick="onClickOkButtonSetCity"
+          android:textColor="@color/text_color"
+          android:textColorHighlight="@color/button_highlight_color"
+          android:textColorLink="@color/purple_200"
+          android:textCursorDrawable="@color/text_color"
+          android:textSize="14sp" />
+    </LinearLayout>
+  </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
