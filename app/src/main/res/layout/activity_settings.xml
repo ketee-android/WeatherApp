@@ -16,7 +16,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        tools:ignore="MissingConstraints">
+        tools:ignore="MissingConstrains">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -26,7 +26,7 @@
             tools:layout_editor_absoluteY="5dp">
 
             <TextView
-                android:id="@+id/settingsScreenName"
+                android:id="@+id/settingsScreenNameView"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:background="#FFFFFF"
@@ -47,23 +47,21 @@
 
             <TextView
                 android:id="@+id/setThemeView"
-                android:layout_width="280dp"
+                android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:layout_marginLeft="4dp"
                 android:layout_marginBottom="0dp"
                 android:fontFamily="sans-serif-condensed-light"
                 android:gravity="center"
                 android:text="@string/set_theme"
-                android:textAlignment="viewStart"
                 android:textColor="@color/text_color"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.03"
-                app:layout_constraintStart_toStartOf="@+id/settingsScreenName"
-                app:layout_constraintTop_toBottomOf="@+id/settingsScreenName"
-                app:layout_constraintVertical_bias="0.166"
-                tools:ignore="RtlCompat" />
+                app:layout_constraintStart_toStartOf="@+id/settingsScreenNameView"
+                app:layout_constraintTop_toBottomOf="@+id/settingsScreenNameView"
+                app:layout_constraintVertical_bias="0.166" />
 
             <RadioGroup
                 android:id="@+id/radioGroupThemes"
@@ -97,6 +95,7 @@
                     android:layout_height="50dp"
                     android:layout_marginLeft="12dp"
                     android:buttonTint="@color/text_color"
+                    android:checked="true"
                     android:fontFamily="sans-serif-condensed-light"
                     android:text="@string/light_theme"
                     android:textColor="@color/text_color"
@@ -109,21 +108,19 @@
 
             <TextView
                 android:id="@+id/setLanguageView"
-                android:layout_width="280dp"
+                android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:layout_marginLeft="4dp"
                 android:layout_marginBottom="0dp"
                 android:fontFamily="sans-serif-condensed-light"
                 android:gravity="center"
                 android:text="@string/set_language"
-                android:textAlignment="viewStart"
                 android:textColor="@color/text_color"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/radioGroupThemes"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/radioGroupThemes"
-                tools:ignore="RtlCompat" />
+                app:layout_constraintStart_toStartOf="@+id/radioGroupThemes" />
 
             <RadioGroup
                 android:id="@+id/radioGroupLanguage"
@@ -142,6 +139,7 @@
                     android:layout_height="50dp"
                     android:layout_marginLeft="12dp"
                     android:buttonTint="@color/text_color"
+                    android:checked="true"
                     android:fontFamily="sans-serif-condensed-light"
                     android:text="@string/ru_language"
                     android:textColor="@color/text_color"
@@ -191,27 +189,27 @@
                 app:layout_constraintTop_toBottomOf="@+id/radioGroupLanguage" />
 
             <Button
-            android:id="@+id/okButtonSettings"
-            android:layout_width="88dp"
-            android:layout_height="49dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginLeft="12dp"
-            android:backgroundTint="@color/button_color"
-            android:backgroundTintMode="src_atop"
-            android:fontFamily="sans-serif-condensed"
-            android:onClick="onClickOkButtonSettings"
-            android:text="@string/ok_button"
-            android:textColor="@color/text_color"
-            android:textColorHighlight="@color/button_highlight_color"
-            android:textColorLink="@color/purple_200"
-            android:textCursorDrawable="@color/text_color"
-            android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/aboutButton"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="@+id/aboutButton"
-            app:layout_constraintTop_toBottomOf="@+id/aboutButton"
-            app:layout_constraintVertical_bias="0.955" />
+                android:id="@+id/okButtonSettings"
+                android:layout_width="88dp"
+                android:layout_height="49dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="12dp"
+                android:backgroundTint="@color/button_color"
+                android:backgroundTintMode="src_atop"
+                android:fontFamily="sans-serif-condensed"
+                android:onClick="onClickOkButtonSettings"
+                android:text="@string/ok_button"
+                android:textColor="@color/text_color"
+                android:textColorHighlight="@color/button_highlight_color"
+                android:textColorLink="@color/purple_200"
+                android:textCursorDrawable="@color/text_color"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/aboutButton"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/aboutButton"
+                app:layout_constraintTop_toBottomOf="@+id/aboutButton"
+                app:layout_constraintVertical_bias="0.955" />
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -41,24 +41,4 @@
         app:layout_constraintTop_toBottomOf="@+id/appNameView"
         app:layout_constraintVertical_bias="0.035" />
 
-    <Button
-        android:id="@+id/okButtonAbout"
-        android:layout_width="88dp"
-        android:layout_height="49dp"
-        android:backgroundTint="@color/button_color"
-        android:backgroundTintMode="src_atop"
-        android:fontFamily="sans-serif-condensed"
-        android:onClick="onClickOkButtonAbout"
-        android:text="@string/ok_button"
-        android:textColor="@color/text_color"
-        android:textColorHighlight="@color/button_highlight_color"
-        android:textColorLink="@color/purple_200"
-        android:textCursorDrawable="@color/text_color"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/aboutTextView"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="@+id/aboutTextView"
-        app:layout_constraintTop_toBottomOf="@+id/aboutTextView"
-        app:layout_constraintVertical_bias="0.969" />
 </androidx.constraintlayout.widget.ConstraintLayout>

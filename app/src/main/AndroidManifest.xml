@@ -11,11 +11,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Weather_Application">
-        <activity android:name=".AboutActivity"
-            android:label="@string/about_app"></activity>
-        <activity android:name=".SettingsActivity" />
-        <activity android:name=".SetCityActivity" />
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".AboutActivity"
+            android:label="@string/about"/>
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/settings_screen_name" />
+        <activity
+            android:name=".ChoseCityActivity"
+            android:label="@string/chose_city_screen_name" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -4,14 +4,21 @@
     <string name="night_weather">°C at night</string>
     <string name="set_date_button">Select a date</string>
     <string name="settings_button" translatable="false">Settings</string>
+    <string name="pressure_view" translatable="false">Atmosphere pressure:</string>
+    <string name="wind_speed_view" translatable="false">Wind speed:</string>
+    <string name="humidity_view" translatable="false">Air humidity:</string>
+    <string name="pressure_indicator" translatable="false">mmHg</string>
+    <string name="wind_speed_indicator" translatable="false">m/s</string>
 
     <!--    SetCityActivity-->
-    <string name="set_city_screen_name" translatable="false">Chose city</string>
-    <string name="set_city_text_edit">Enter city name</string>
-    <string name="set_parameters" translatable="false">Show additionally</string>
+    <string name="chose_city_screen_name" translatable="false">Chose city</string>
+    <string name="chose_city_text_edit">Enter city name</string>
+    <string name="chose_parameters" translatable="false">Show additionally</string>
     <string name="check_box_pressure" translatable="false">Atmosphere pressure</string>
     <string name="check_box_wind_speed" translatable="false">Wind speed</string>
+    <string name="check_box_humidity" translatable="false">Air humidity</string>
     <string name="list_of_cities" translatable="false">List of cities</string>
+
     <string name="ok_button">ОК</string>
     <!--  Cities  -->
     <string name="radio_button_moscow" translatable="false">Moscow</string>
@@ -39,7 +46,7 @@
     <string name="settings_screen_name" translatable="false">Settings</string>
     <string name="set_theme" translatable="false">Set theme</string>
     <string name="dark_theme" translatable="false">Dark theme</string>
-    <string name="light_theme" translatable="false">Classic theme</string>
+    <string name="light_theme" translatable="false">Light theme</string>
     <string name="set_language" translatable="false">Chose interface language</string>
     <string name="en_language" translatable="false">English</string>
     <string name="ru_language" translatable="false">Russian</string>
