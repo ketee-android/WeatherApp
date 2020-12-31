@@ -4,6 +4,4 @@
     <color name="button_color">#012E67</color>
     <color name="button_highlight_color">#FF4800AE</color>
     <color name="text_color">#9CACBF</color>
-    <color name="background_title">#FF001C40</color>
-    <color name="background_title_2">#FF000F22</color>
 </resources>
