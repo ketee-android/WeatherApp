@@ -3,57 +3,68 @@
     <string name="app_name" translatable="false">Weather App</string>
     <string name="day_weather">°C днем</string>
     <string name="night_weather">°C ночью</string>>
-    <string name="set_date_button">Выберите дату</string>
-    <string name="settings_button" translatable="false">Настройки</string>
-    <string name="default_temp" translatable="false">0</string>
-    <string name="pressure_view" translatable="false">Атмосферное давление:</string>
-    <string name="wind_speed_view" translatable="false">Скорость ветра:</string>
-    <string name="humidity_view" translatable="false">Влажность воздуха:</string>
+    <string name="settings_button">Настройки</string>
+    <string name="default_day_temp" translatable="false">-11</string>
+    <string name="default_night_temp" translatable="false">-15</string>
+    <string name="default_atmosphere_pressure" translatable="false">751</string>
+    <string name="default_wind_speed" translatable="false">2</string>
+    <string name="default_humidity" translatable="false">87</string>
+    <string name="pressure_view">Атмосферное давление:</string>
+    <string name="wind_speed_view">Скорость ветра:</string>
+    <string name="humidity_view">Влажность воздуха:</string>
     <string name="humidity_indicator" translatable="false">%</string>
     <string name="pressure_indicator" translatable="false">мм рт.ст</string>
     <string name="wind_speed_indicator" translatable="false">м/с</string>
+    <string name="moscow">Москва</string>
+    <string name="chose_city_button">Изменить город</string>
+    <string name="week_weather_button">Погода на неделю</string>
+    <string name="default_week_weather_url" translatable="false">https://yandex.ru/pogoda/Moscow</string>
 
     <!--    SetCityActivity-->
-    <string name="chose_city_screen_name" translatable="false">Выберите город</string>
+    <string name="chose_city_screen_name">Выберите город</string>
     <string name="chose_city_text_edit">Введите название города</string>
-    <string name="chose_parameters" translatable="false">Показать дополнительно</string>
-    <string name="check_box_pressure" translatable="false">Атмосферное давление</string>
-    <string name="check_box_wind_speed" translatable="false">Скорость ветра</string>
-    <string name="check_box_humidity" translatable="false">Влажность воздуха</string>
-    <string name="list_of_cities" translatable="false">Список городов</string>
+    <string name="chose_parameters">Показать дополнительно</string>
+    <string name="check_box_pressure">Атмосферное давление</string>
+    <string name="check_box_wind_speed">Скорость ветра</string>
+    <string name="check_box_humidity">Влажность воздуха</string>
+    <string name="list_of_cities">Список городов</string>
     <string name="ok_button">ОК</string>
+    <string name="forecast_text">Прогноз погоды на сегодня в г.</string>
+
     <!--  Cities  -->
-    <string name="radio_button_moscow" translatable="false">Москва</string>
-    <string name="radio_button_petersburg" translatable="false">Санкт-Петербург</string>
-    <string name="radio_button_anapa" translatable="false">Анапа</string>
-    <string name="radio_button_vladivostok" translatable="false">Владивосток</string>
-    <string name="radio_button_vladimir" translatable="false">Владимир</string>
-    <string name="radio_button_volgograd" translatable="false">Волгоград</string>
-    <string name="radio_button_voronezh" translatable="false">Воронеж</string>
-    <string name="radio_button_ekaterinburg" translatable="false">Екатеринбург</string>
-    <string name="radio_button_kazan" translatable="false">Казань</string>
-    <string name="radio_button_kaliningrad" translatable="false">Калининград</string>
-    <string name="radio_button_nizhniy_novgorod" translatable="false">Нижний Новгород</string>
-    <string name="radio_button_novosibirsk" translatable="false">Новосибирск</string>
-    <string name="radio_button_sochi" translatable="false">Сочи</string>
-    <string name="radio_button_omsk" translatable="false">Омск</string>
-    <string name="radio_button_rostov_na_donu" translatable="false">Ростов-на-Дону</string>
-    <string name="radio_button_samara" translatable="false">Самара</string>
-    <string name="radio_button_suzdal" translatable="false">Суздаль</string>
-    <string name="radio_button_tver" translatable="false">Тверь</string>
-    <string name="radio_button_ufa" translatable="false">Уфа</string>
-    <string name="radio_button_yaroslavl" translatable="false">Ярославль</string>
+    <string-array name="cities_array">
+        <item>Москва</item>
+        <item>Санкт-Петербург</item>
+        <item>Анапа</item>
+        <item>Владивосток</item>
+        <item>Владимир</item>
+        <item>Волгоград</item>
+        <item>Воронеж</item>
+        <item>Екатеринбург</item>
+        <item>Казань</item>
+        <item>Калининград</item>
+        <item>Нижний Новгород</item>
+        <item>Новосибирск</item>
+        <item>Сочи</item>
+        <item>Омск</item>
+        <item>Ростов-на-Дону</item>
+        <item>Самара</item>
+        <item>Суздаль</item>
+        <item>Тверь</item>
+        <item>Уфа</item>
+        <item>Ярославль</item>
+    </string-array>
 
     <!--    SettingsActivity-->
-    <string name="settings_screen_name" translatable="false">Настройки</string>
-    <string name="set_theme" translatable="false">Выберите тему</string>
-    <string name="dark_theme" translatable="false">Темная тема</string>
-    <string name="light_theme" translatable="false">Светлая тема</string>
-    <string name="set_language" translatable="false">Выберите язык интерфейса</string>
-    <string name="en_language" translatable="false">Английский язык</string>
-    <string name="ru_language" translatable="false">Русский язык</string>
-    <string name="about" translatable="false">О приложении</string>
+    <string name="settings_screen_name">Настройки</string>
+    <string name="set_theme">Выберите тему</string>
+    <string name="dark_theme">Темная тема</string>
+    <string name="light_theme">Светлая тема</string>
+    <string name="set_language">Выберите язык интерфейса</string>
+    <string name="en_language">Английский язык</string>
+    <string name="ru_language">Русский язык</string>
+    <string name="about">О приложении</string>
 
     <!--    AboutActivity-->
-    <string name="about_app" translatable="false">Учебный проект Geekbrains</string>
+    <string name="about_app">Учебный проект Geekbrains</string>
 </resources>
