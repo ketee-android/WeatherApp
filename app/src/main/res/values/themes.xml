@@ -5,13 +5,20 @@
         <item name="colorPrimary">@color/button_color</item>
         <item name="colorPrimaryVariant">@color/button_highlight_color</item>
         <item name="colorOnPrimary">@color/text_color</item>
+        <item name="android:textColorPrimary">@color/text_color</item>
 
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/button_color</item>
         <item name="colorSecondaryVariant">@color/background_color</item>
         <item name="colorOnSecondary">@color/text_color</item>
+        <item name="android:textColorSecondary">@color/text_color</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+    </style>
+
+    <style name="MyActionBar" parent="ThemeOverlay.AppCompat.ActionBar">
+
+        <item name="android:fontFamily">sans-serif-condensed-medium</item>
     </style>
 </resources>
