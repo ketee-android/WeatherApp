@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="background_color">#09111E</color>
+    <color name="fragment_color">#FF142033</color>
     <color name="button_color">#012E67</color>
     <color name="button_highlight_color">#FF4800AE</color>
     <color name="text_color">#9CACBF</color>
+    <color name="second_text_color">#FF626B77</color>
+    <color name="selected_text_color">#FF8DFAED</color>
+    <color name="transparent">#00000000</color>
 </resources>

@@ -23,128 +23,29 @@
         tools:layout_editor_absoluteX="3dp"
         tools:layout_editor_absoluteY="5dp">
 
-      <TextView
-          android:id="@+id/titleChoseCityView"
+      <fragment
+          android:id="@+id/choseCityAutoCompleteFragment"
+          android:name="com.ketee_jishs.weather_application.ChoseCityFragment"
           android:layout_width="match_parent"
-          android:layout_height="55dp"
-          android:background="#FFFFFF"
-          android:backgroundTint="@color/button_color"
-          android:fontFamily="sans-serif-condensed-medium"
-          android:gravity="center"
-          android:text="@string/chose_city_screen_name"
-          android:textAlignment="center"
-          android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-          android:textColor="@color/text_color"
-          android:textSize="24sp" />
+          android:layout_height="wrap_content"
+          android:layout_marginHorizontal="10dp"
+          android:layout_marginVertical="6dp" />
 
-      <Spinner
-          android:id="@+id/chooseCitySpinner"
-          style="@style/Widget.AppCompat.Spinner.DropDown"
-          android:layout_width="268dp"
-          android:layout_height="49dp"
-          android:layout_marginLeft="12dp"
-          android:layout_marginTop="24dp"
-          android:layout_marginBottom="24dp"
-          android:dropDownSelector="@color/background_color"
-          android:entries="@array/cities_array"
-          android:fontFamily="sans-serif-condensed-light"
-          android:scrollbarThumbHorizontal="@color/text_color"
-          android:scrollbarThumbVertical="@color/text_color"
-          android:textColor="@color/text_color"
-          android:textColorHighlight="@color/text_color"
-          android:textColorHint="@color/text_color"
-          android:textColorLink="@color/text_color"
-          android:textCursorDrawable="@color/text_color"
-          android:textSize="18sp"
-          app:layout_constraintBottom_toBottomOf="parent"
-          app:layout_constraintEnd_toEndOf="parent"
-          app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toBottomOf="@+id/titleChoseCityView"
-          app:layout_constraintVertical_bias="0.02" />
-
-      <TextView
-          android:id="@+id/choseAdditionalPapamsView"
+      <fragment
+          android:id="@+id/choseAddParamsFragment"
+          android:name="com.ketee_jishs.weather_application.ChoseAdditionalPapamsFragment"
           android:layout_width="match_parent"
-          android:layout_height="55dp"
-          android:background="#FFFFFF"
-          android:backgroundTint="@color/button_color"
-          android:fontFamily="sans-serif-condensed-medium"
-          android:gravity="center"
-          android:text="@string/chose_parameters"
-          android:textAlignment="center"
-          android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-          android:textColor="@color/text_color"
-          android:textSize="24sp"
-          app:layout_constraintBottom_toBottomOf="parent"
-          app:layout_constraintEnd_toEndOf="@+id/titleChoseCityView"
-          app:layout_constraintHorizontal_bias="0.476"
-          app:layout_constraintStart_toStartOf="@+id/titleChoseCityView"
-          app:layout_constraintTop_toBottomOf="@+id/chooseCitySpinner"
-          app:layout_constraintVertical_bias="0.052" />
+          android:layout_height="wrap_content"
+          android:layout_marginHorizontal="10dp"
+          android:layout_marginVertical="6dp" />
 
-      <CheckBox
-          android:id="@+id/checkBoxPressure"
-          android:layout_width="250dp"
-          android:layout_height="45dp"
-          android:layout_marginTop="24dp"
-          android:layout_marginLeft="12dp"
-          android:buttonTint="@color/text_color"
-          android:fontFamily="sans-serif-condensed-light"
-          android:text="@string/check_box_pressure"
-          android:textColor="@color/text_color"
-          android:textSize="18sp"
-          app:layout_constraintStart_toStartOf="@+id/chooseCitySpinner"
-          app:layout_constraintTop_toBottomOf="@+id/choseAdditionalPapamsView" />
-
-      <CheckBox
-          android:id="@+id/checkBoxWindSpeed"
-          android:layout_width="250dp"
-          android:layout_height="45dp"
-          android:layout_marginTop="12dp"
-          android:layout_marginLeft="12dp"
-          android:layout_marginBottom="12dp"
-          android:buttonTint="@color/text_color"
-          android:fontFamily="sans-serif-condensed-light"
-          android:text="@string/check_box_wind_speed"
-          android:textColor="@color/text_color"
-          android:textSize="18sp"
-          app:layout_constraintEnd_toEndOf="@+id/checkBoxPressure"
-          app:layout_constraintHorizontal_bias="0.0"
-          app:layout_constraintStart_toStartOf="@+id/checkBoxPressure"
-          app:layout_constraintTop_toBottomOf="@+id/checkBoxPressure" />
-
-      <CheckBox
-          android:id="@+id/checkBoxAirHumidity"
-          android:layout_width="250dp"
-          android:layout_height="45dp"
-          android:layout_marginLeft="12dp"
-          android:layout_marginTop="0dp"
-          android:layout_marginBottom="24dp"
-          android:buttonTint="@color/text_color"
-          android:fontFamily="sans-serif-condensed-light"
-          android:text="@string/check_box_humidity"
-          android:textColor="@color/text_color"
-          android:textSize="18sp"
-          app:layout_constraintEnd_toEndOf="@+id/checkBoxPressure"
-          app:layout_constraintHorizontal_bias="0.0"
-          app:layout_constraintStart_toStartOf="@+id/checkBoxPressure"
-          app:layout_constraintTop_toBottomOf="@+id/checkBoxPressure" />
-
-      <Button
-          android:id="@+id/okButtonSetCity"
-          android:layout_width="88dp"
-          android:layout_height="49dp"
-          android:layout_marginLeft="12dp"
-          android:layout_marginBottom="24dp"
-          android:backgroundTint="@color/button_color"
-          android:backgroundTintMode="src_atop"
-          android:fontFamily="sans-serif-condensed"
-          android:text="@string/ok_button"
-          android:textColor="@color/text_color"
-          android:textColorHighlight="@color/button_highlight_color"
-          android:textColorLink="@color/purple_200"
-          android:textCursorDrawable="@color/text_color"
-          android:textSize="14sp" />
+      <fragment
+          android:id="@+id/okButtonSetCityFragment"
+          android:name="com.ketee_jishs.weather_application.OkButtonSetCityFragment"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginHorizontal="10dp"
+          android:layout_marginVertical="6dp" />
     </LinearLayout>
   </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

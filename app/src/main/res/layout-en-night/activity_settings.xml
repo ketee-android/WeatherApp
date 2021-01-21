@@ -25,191 +25,37 @@
             tools:layout_editor_absoluteX="3dp"
             tools:layout_editor_absoluteY="5dp">
 
-            <TextView
-                android:id="@+id/settingsScreenNameView"
+            <fragment
+                android:id="@+id/setThemeFragment"
+                android:name="com.ketee_jishs.weather_application.SetThemeFragment"
                 android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:background="#FFFFFF"
-                android:backgroundTint="@color/button_color"
-                android:fontFamily="sans-serif-condensed-medium"
-                android:gravity="center"
-                android:text="@string/settings_screen_name"
-                android:textAlignment="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                android:textColor="@color/text_color"
-                android:textSize="24sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <TextView
-                android:id="@+id/setThemeView"
-                android:layout_width="wrap_content"
-                android:layout_height="50dp"
-                android:layout_marginLeft="4dp"
-                android:layout_marginBottom="0dp"
-                android:fontFamily="sans-serif-condensed-light"
-                android:gravity="center"
-                android:text="@string/set_theme"
-                android:textColor="@color/text_color"
-                android:textSize="18sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.03"
-                app:layout_constraintStart_toStartOf="@+id/settingsScreenNameView"
-                app:layout_constraintTop_toBottomOf="@+id/settingsScreenNameView"
-                app:layout_constraintVertical_bias="0.166" />
-
-            <RadioGroup
-                android:id="@+id/radioGroupThemes"
-                android:layout_width="280dp"
-                android:layout_height="127dp"
-                app:layout_constraintBottom_toTopOf="@+id/setLanguageView"
-                app:layout_constraintEnd_toEndOf="@+id/setThemeView"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/setThemeView"
-                app:layout_constraintTop_toBottomOf="@+id/setThemeView"
-                app:layout_constraintVertical_bias="0.0">
-
-                <RadioButton
-                    android:id="@+id/radioButtonDarkTheme"
-                    android:layout_width="180dp"
-                    android:layout_height="50dp"
-                    android:layout_marginLeft="12dp"
-                    android:buttonTint="@color/text_color"
-                    android:fontFamily="sans-serif-condensed-light"
-                    android:text="@string/dark_theme"
-                    android:textColor="@color/text_color"
-                    android:textColorHint="@color/text_color"
-                    android:textColorLink="@color/text_color"
-                    android:textSize="14sp"
-                    tools:layout_editor_absoluteX="35dp"
-                    tools:layout_editor_absoluteY="130dp" />
-
-                <RadioButton
-                    android:id="@+id/radioButtonLightTheme"
-                    android:layout_width="180dp"
-                    android:layout_height="50dp"
-                    android:layout_marginLeft="12dp"
-                    android:buttonTint="@color/text_color"
-                    android:checked="true"
-                    android:fontFamily="sans-serif-condensed-light"
-                    android:text="@string/light_theme"
-                    android:textColor="@color/text_color"
-                    android:textColorHint="@color/text_color"
-                    android:textColorLink="@color/text_color"
-                    android:textSize="14sp"
-                    tools:layout_editor_absoluteX="35dp"
-                    tools:layout_editor_absoluteY="195dp" />
-            </RadioGroup>
-
-            <TextView
-                android:id="@+id/setLanguageView"
-                android:layout_width="wrap_content"
-                android:layout_height="50dp"
-                android:layout_marginLeft="4dp"
-                android:layout_marginBottom="0dp"
-                android:fontFamily="sans-serif-condensed-light"
-                android:gravity="center"
-                android:text="@string/set_language"
-                android:textColor="@color/text_color"
-                android:textSize="18sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/radioGroupThemes"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/radioGroupThemes" />
-
-            <RadioGroup
-                android:id="@+id/radioGroupLanguage"
-                android:layout_width="280dp"
                 android:layout_height="wrap_content"
-                app:layout_constraintBottom_toTopOf="@+id/aboutView"
-                app:layout_constraintEnd_toEndOf="@+id/setLanguageView"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/setLanguageView"
-                app:layout_constraintTop_toBottomOf="@+id/setLanguageView"
-                app:layout_constraintVertical_bias="0.0">
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="6dp" />
 
-                <RadioButton
-                    android:id="@+id/radioButtonRussianLang"
-                    android:layout_width="180dp"
-                    android:layout_height="50dp"
-                    android:layout_marginLeft="12dp"
-                    android:buttonTint="@color/text_color"
-                    android:checked="true"
-                    android:fontFamily="sans-serif-condensed-light"
-                    android:text="@string/ru_language"
-                    android:textColor="@color/text_color"
-                    android:textColorHint="@color/text_color"
-                    android:textColorLink="@color/text_color"
-                    android:textSize="14sp"
-                    tools:layout_editor_absoluteX="35dp"
-                    tools:layout_editor_absoluteY="130dp" />
-
-                <RadioButton
-                    android:id="@+id/radioButtonEnglishLang"
-                    android:layout_width="180dp"
-                    android:layout_height="50dp"
-                    android:layout_marginLeft="12dp"
-                    android:buttonTint="@color/text_color"
-                    android:fontFamily="sans-serif-condensed-light"
-                    android:text="@string/en_language"
-                    android:textColor="@color/text_color"
-                    android:textColorHint="@color/text_color"
-                    android:textColorLink="@color/text_color"
-                    android:textSize="14sp"
-                    tools:layout_editor_absoluteX="35dp"
-                    tools:layout_editor_absoluteY="195dp" />
-            </RadioGroup>
-
-            <Button
-                android:id="@+id/aboutButton"
+            <fragment
+                android:id="@+id/setLanguageFragment"
+                android:name="com.ketee_jishs.weather_application.SetLanguageFragment"
                 android:layout_width="match_parent"
-                android:layout_height="49dp"
-                android:layout_marginTop="12dp"
-                android:backgroundTint="@color/background_color"
-                android:backgroundTintMode="src_atop"
-                android:fontFamily="sans-serif-condensed-light"
-                android:onClick="onClickAboutButton"
-                android:text="@string/about"
-                android:textAlignment="viewStart"
-                android:textAllCaps="false"
-                android:textColor="@color/text_color"
-                android:textColorHighlight="@color/button_highlight_color"
-                android:textColorHint="@android:color/background_dark"
-                android:textColorLink="@color/purple_200"
-                android:textCursorDrawable="@color/text_color"
-                android:textSize="18sp"
-                app:layout_constraintEnd_toEndOf="@+id/radioGroupLanguage"
-                app:layout_constraintHorizontal_bias="0.061"
-                app:layout_constraintStart_toStartOf="@+id/radioGroupLanguage"
-                app:layout_constraintTop_toBottomOf="@+id/radioGroupLanguage" />
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="6dp" />
 
-            <Button
-                android:id="@+id/okButtonSettings"
-                android:layout_width="88dp"
-                android:layout_height="49dp"
-                android:layout_marginTop="12dp"
-                android:layout_marginLeft="12dp"
-                android:backgroundTint="@color/button_color"
-                android:backgroundTintMode="src_atop"
-                android:fontFamily="sans-serif-condensed"
-                android:onClick="onClickOkButtonSettings"
-                android:text="@string/ok_button"
-                android:textColor="@color/text_color"
-                android:textColorHighlight="@color/button_highlight_color"
-                android:textColorLink="@color/purple_200"
-                android:textCursorDrawable="@color/text_color"
-                android:textSize="14sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/aboutButton"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="@+id/aboutButton"
-                app:layout_constraintTop_toBottomOf="@+id/aboutButton"
-                app:layout_constraintVertical_bias="0.955" />
+            <fragment
+                android:id="@+id/aboutButtonFragment"
+                android:name="com.ketee_jishs.weather_application.AboutButtonFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="6dp" />
+
+            <fragment
+                android:id="@+id/okButtonSettingsFragment"
+                android:name="com.ketee_jishs.weather_application.OkButtonSettingsFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="6dp" />
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
