@@ -19,11 +19,15 @@
     <string name="chose_city_button">Изменить город</string>
     <string name="week_weather_button">Погода на неделю</string>
     <string name="default_week_weather_url" translatable="false">https://yandex.ru/pogoda/Moscow</string>
+    <string name="add_params_text">Дополнительные параметры:</string>
+    <string name="weather_forecast">Прогноз погоды:</string>
+    <string name="change_params">Настроить</string>
 
-    <!--    SetCityActivity-->
+    <!--    ChoseCityActivity-->
     <string name="chose_city_screen_name">Выберите город</string>
+    <string name="chose_city_fragment">Введите название города:</string>
     <string name="chose_city_text_edit">Введите название города</string>
-    <string name="chose_parameters">Показать дополнительно</string>
+    <string name="chose_parameters">Показать дополнительно:</string>
     <string name="check_box_pressure">Атмосферное давление</string>
     <string name="check_box_wind_speed">Скорость ветра</string>
     <string name="check_box_humidity">Влажность воздуха</string>
@@ -33,38 +37,205 @@
 
     <!--  Cities  -->
     <string-array name="cities_array">
-        <item>Москва</item>
-        <item>Санкт-Петербург</item>
-        <item>Анапа</item>
-        <item>Владивосток</item>
-        <item>Владимир</item>
-        <item>Волгоград</item>
-        <item>Воронеж</item>
-        <item>Екатеринбург</item>
-        <item>Казань</item>
-        <item>Калининград</item>
-        <item>Нижний Новгород</item>
-        <item>Новосибирск</item>
-        <item>Сочи</item>
-        <item>Омск</item>
-        <item>Ростов-на-Дону</item>
-        <item>Самара</item>
-        <item>Суздаль</item>
-        <item>Тверь</item>
-        <item>Уфа</item>
-        <item>Ярославль</item>
+        <item>Москва</item>                 <item>Санкт-Петербург</item>
+        <item>Анапа</item>                  <item>Владивосток</item>
+        <item>Владимир</item>               <item>Волгоград</item>
+        <item>Воронеж</item>                <item>Екатеринбург</item>
+        <item>Казань</item>                 <item>Калининград</item>
+        <item>Нижний Новгород</item>        <item>Новосибирск</item>
+        <item>Сочи</item>                   <item>Омск</item>
+        <item>Ростов-на-Дону</item>         <item>Самара</item>
+        <item>Суздаль</item>                <item>Тверь</item>
+        <item>Уфа</item>                    <item>Челябинск</item>
+        <item>Ярославль</item>              <item>Красноярск</item>
+        <item>Пермь</item>                  <item>Краснодар</item>
+        <item>Саратов</item>                <item>Тюмень</item>
+        <item>Тольятти</item>               <item>Ижевск</item>
+        <item>Барнаул</item>                <item>Ульяновск</item>
+        <item>Иркутск</item>                <item>Хабаровск</item>
+        <item>Махачкала</item>              <item>Томск</item>
+        <item>Оренбург</item>               <item>Кемерово</item>
+        <item>Новокузнецк</item>            <item>Рязань</item>
+        <item>Набережные челны</item>       <item>Астрахань</item>
+        <item>Пенза</item>                  <item>Киров</item>
+        <item>Липецк</item>                 <item>Чебоксары</item>
+        <item>Ставрополь</item>             <item>Севастополь</item>
+        <item>Улан-Удэ</item>               <item>Магнитогорск</item>
+        <item>Брянск</item>                 <item>Белгород</item>
+        <item>Сургут</item>                 <item>Чита</item>
+        <item>Нижний Тагил</item>           <item>Архангельск</item>
+        <item>Симферополь</item>            <item>Калуга</item>
+        <item>Смоленск</item>               <item>Якутск</item>
+        <item>Саранск</item>                <item>Орел</item>
+        <item>Подольск</item>               <item>Грозный</item>
+        <item>Владикавказ</item>            <item>Мурманск</item>
+        <item>Тамбов</item>                 <item>Белгород</item>
+        <item>Йошкар-Ола</item>             <item>Таганрог</item>
+        <item>Нижнекамск</item>             <item>Комсомольк-на-Амуре</item>
+        <item>Тюмень</item>                 <item>Южно-Сахалинск</item>
     </string-array>
 
     <!--    SettingsActivity-->
     <string name="settings_screen_name">Настройки</string>
-    <string name="set_theme">Выберите тему</string>
+    <string name="set_theme">Выберите тему:</string>
     <string name="dark_theme">Темная тема</string>
     <string name="light_theme">Светлая тема</string>
-    <string name="set_language">Выберите язык интерфейса</string>
+    <string name="set_language">Выберите язык интерфейса:</string>
     <string name="en_language">Английский язык</string>
     <string name="ru_language">Русский язык</string>
     <string name="about">О приложении</string>
 
     <!--    AboutActivity-->
     <string name="about_app">Учебный проект Geekbrains</string>
+
+    <!--    DayTempDegrees-->
+    <string-array name="day_degrees_array">
+        <item> -11</item>         <item> -2</item>         <item> -17</item>         <item> -3</item> 
+        <item> -25</item>         <item> -13</item>        <item> -15</item>         <item> -14</item> 
+        <item> -6</item>          <item> -19</item>        <item> -18</item>         <item> -1</item> 
+        <item> -7</item>          <item> -22</item>        <item> -9</item>          <item> -21</item> 
+        <item> -12</item>         <item> -10</item>        <item> -20</item>         <item> -4</item> 
+        <item> -11</item>         <item> -2</item>         <item> -17</item>         <item> -3</item> 
+        <item> -25</item>         <item> -13</item>        <item> -15</item>         <item> -14</item> 
+        <item> -6</item>          <item> -19</item>        <item> -18</item>         <item> -1</item> 
+        <item> -7</item>          <item> -22</item>        <item> -9</item>          <item> -21</item> 
+        <item> -12</item>         <item> -10</item>        <item> -20</item>         <item> -4</item> 
+        <item> -11</item>         <item> -2</item>         <item> -17</item>         <item> -3</item> 
+        <item> -25</item>         <item> -13</item>        <item> -15</item>         <item> -14</item> 
+        <item> -6</item>          <item> -19</item>        <item> -18</item>         <item> -1</item> 
+        <item> -7</item>          <item> -22</item>        <item> -9</item>          <item> -21</item> 
+        <item> -12</item>         <item> -10</item>        <item> -20</item>         <item> -4</item> 
+        <item> -18</item>         <item> -1</item>         <item> -7</item>          <item> -22</item> 
+        <item> -9</item>          <item> -21</item>        <item> -12</item>         <item> -10</item> 
+        <item> -20</item>         <item> -4</item>         <item> -22</item>         <item> -10</item>  
+    </string-array>
+
+    <!--    NightTempDegrees-->
+    <string-array name="night_degrees_array">
+        <item>-15</item>         <item>-6</item>         <item>-20</item>         <item>-5</item> 
+        <item>-27</item>         <item>-19</item>        <item>-18</item>         <item>-21</item> 
+        <item>-9</item>          <item>-25</item>        <item>-22</item>         <item>-3</item> 
+        <item>-10</item>         <item>-27</item>        <item>-11</item>         <item>-26</item> 
+        <item>-16</item>         <item>-12</item>        <item>-23</item>         <item>-7</item> 
+        <item>-22</item>         <item>-3</item>         <item>-10</item>         <item>-27</item> 
+        <item>-11</item>         <item>-26</item>        <item>-16</item>         <item>-12</item> 
+        <item>-23</item>         <item>-7</item>         <item>-15</item>         <item>-6</item> 
+        <item>-20</item>         <item>-5</item>         <item>-27</item>         <item>-19</item> 
+        <item>-18</item>         <item>-21</item>        <item>-9</item>          <item>-25</item> 
+        <item>-22</item>         <item>-3</item>         <item>-10</item>         <item>-27</item> 
+        <item>-11</item>         <item>-26</item>        <item>-16</item>         <item>-12</item> 
+        <item>-23</item>         <item>-7</item>         <item>-15</item>         <item>-6</item> 
+        <item>-20</item>         <item>-5</item>         <item>-27</item>         <item>-19</item> 
+        <item>-18</item>         <item>-21</item>        <item>-9</item>          <item>-25</item> 
+        <item>-22</item>         <item>-3</item>         <item>-10</item>         <item>-27</item> 
+        <item>-11</item>         <item>-26</item>        <item>-16</item>         <item>-12</item> 
+        <item>-23</item>         <item>-7</item>         <item>-9</item>          <item>-25</item> 
+    </string-array>
+
+    <!--    Atmosphere pressure-->
+    <string-array name="atmosphere_pressure_array">
+       <item>751</item>       <item>762</item>       <item>750</item>       <item>764</item>
+       <item>749</item>       <item>754</item>       <item>748</item>       <item>755</item>
+       <item>751</item>       <item>748</item>       <item>752</item>       <item>747</item>
+       <item>758</item>       <item>742</item>       <item>760</item>       <item>753</item>
+       <item>751</item>       <item>762</item>       <item>750</item>       <item>763</item>
+       <item>760</item>       <item>753</item>       <item>751</item>       <item>762</item>
+       <item>750</item>       <item>763</item>       <item>751</item>       <item>762</item>
+       <item>750</item>       <item>764</item>       <item>750</item>       <item>764</item>
+       <item>749</item>       <item>754</item>       <item>748</item>       <item>755</item>
+       <item>751</item>       <item>748</item>       <item>752</item>       <item>747</item>
+       <item>760</item>       <item>753</item>       <item>751</item>       <item>762</item>
+       <item>750</item>       <item>763</item>       <item>760</item>       <item>753</item>
+       <item>751</item>       <item>762</item>       <item>750</item>       <item>763</item>
+       <item>751</item>       <item>762</item>       <item>750</item>       <item>764</item>
+       <item>750</item>       <item>764</item>       <item>749</item>       <item>754</item>
+       <item>751</item>       <item>762</item>       <item>750</item>       <item>764</item>
+       <item>750</item>       <item>764</item>       <item>749</item>       <item>754</item>
+       <item>748</item>       <item>755</item>       <item>764</item>       <item>763</item>
+    </string-array>
+    
+    <!--    Wind speed-->
+    <string-array name="wind_speed_array">
+        <item>2</item>        <item>2</item>        <item>1</item>        <item>9</item>
+        <item>5</item>        <item>3</item>        <item>2</item>        <item>2</item>
+        <item>0</item>        <item>0</item>        <item>7</item>        <item>4</item>
+        <item>3</item>        <item>5</item>        <item>9</item>        <item>6</item>
+        <item>2</item>        <item>7</item>        <item>8</item>        <item>3</item>
+        <item>2</item>        <item>2</item>        <item>0</item>        <item>0</item>
+        <item>7</item>        <item>4</item>        <item>3</item>        <item>5</item>
+        <item>9</item>        <item>6</item>        <item>2</item>        <item>2</item>
+        <item>1</item>        <item>9</item>        <item>5</item>        <item>3</item>
+        <item>2</item>        <item>2</item>        <item>0</item>        <item>0</item>
+        <item>7</item>        <item>4</item>        <item>0</item>        <item>0</item>
+        <item>7</item>        <item>4</item>        <item>3</item>        <item>5</item>
+        <item>9</item>        <item>6</item>        <item>2</item>        <item>7</item>
+        <item>3</item>        <item>5</item>        <item>9</item>        <item>6</item>
+        <item>2</item>        <item>2</item>        <item>1</item>        <item>9</item>
+        <item>5</item>        <item>3</item>        <item>2</item>        <item>2</item>
+        <item>0</item>        <item>0</item>        <item>7</item>        <item>4</item>
+        <item>0</item>        <item>0</item>        <item>9</item>        <item>6</item> 
+    </string-array>
+
+    <!--    Humidity-->
+    <string-array name="humidity_array">
+        <item>87</item>        <item>79</item>        <item>82</item>        <item>76</item>
+        <item>54</item>        <item>77</item>        <item>86</item>        <item>78</item>
+        <item>68</item>        <item>91</item>        <item>87</item>        <item>79</item>
+        <item>82</item>        <item>76</item>        <item>54</item>        <item>77</item>
+        <item>86</item>        <item>78</item>        <item>68</item>        <item>91</item>
+        <item>84</item>        <item>93</item>        <item>59</item>        <item>65</item>
+        <item>82</item>        <item>62</item>        <item>80</item>        <item>63</item>
+        <item>87</item>        <item>52</item>        <item>84</item>        <item>93</item>
+        <item>59</item>        <item>65</item>        <item>82</item>        <item>62</item>
+        <item>80</item>        <item>63</item>        <item>87</item>        <item>79</item>
+        <item>82</item>        <item>76</item>        <item>54</item>        <item>77</item>
+        <item>86</item>        <item>78</item>        <item>68</item>        <item>91</item>
+        <item>84</item>        <item>93</item>        <item>59</item>        <item>65</item>
+        <item>82</item>        <item>62</item>        <item>80</item>        <item>63</item>
+        <item>87</item>        <item>52</item>        <item>87</item>        <item>52</item>
+        <item>68</item>        <item>91</item>        <item>84</item>        <item>93</item>
+        <item>59</item>        <item>65</item>        <item>82</item>        <item>62</item>
+        <item>80</item>        <item>63</item>        <item>80</item>        <item>63</item>
+    </string-array>
+
+    <!--    Weather for week urls-->
+    <string-array name="urls_array">
+       <item>https://yandex.ru/pogoda/Moscow</item>                    <item>https://yandex.ru/pogoda/Saint-petersburg</item>
+       <item>https://yandex.ru/pogoda/Anapa</item>                     <item>https://yandex.ru/pogoda/Vladivostok</item>
+       <item>https://yandex.ru/pogoda/Vladimir</item>                  <item>https://yandex.ru/pogoda/Volgograd</item>
+       <item>https://yandex.ru/pogoda/Voronezh</item>                  <item>https://yandex.ru/pogoda/Yekaterinburg</item>
+       <item>https://yandex.ru/pogoda/Kazan</item>                     <item>https://yandex.ru/pogoda/Kaliningrad</item>
+       <item>https://yandex.ru/pogoda/Nizhny-novgorod</item>           <item>https://yandex.ru/pogoda/Novosibirsk</item>
+       <item>https://yandex.ru/pogoda/Sochi</item>                     <item>https://yandex.ru/pogoda/Omsk</item>
+       <item>https://yandex.ru/pogoda/Rostov-na-Donu</item>            <item>https://yandex.ru/pogoda/Samara</item>
+       <item>https://yandex.ru/pogoda/Suzdal</item>                    <item>https://yandex.ru/pogoda/Tver</item>
+       <item>https://yandex.ru/pogoda/Ufa</item>                       <item>https://yandex.ru/pogoda/Chelyabinsk</item>
+       <item>https://yandex.ru/pogoda/Yaroslavl</item>                 <item>https://yandex.ru/pogoda/Krasnoyarsk</item>
+       <item>https://yandex.ru/pogoda/Perm</item>                      <item>https://yandex.ru/pogoda/Krasnodar</item>
+       <item>https://yandex.ru/pogoda/Saratov</item>                   <item>https://yandex.ru/pogoda/Tyumen</item>
+       <item>https://yandex.ru/pogoda/Togliatti</item>                 <item>https://yandex.ru/pogoda/Izhevsk</item>
+       <item>https://yandex.ru/pogoda/Barnaul</item>                   <item>https://yandex.ru/pogoda/Ulyanovsk</item>
+       <item>https://yandex.ru/pogoda/Irkutsk</item>                   <item>https://yandex.ru/pogoda/Khabarovsk</item>
+       <item>https://yandex.ru/pogoda/Makhachkala</item>               <item>https://yandex.ru/pogoda/Tomsk</item>
+       <item>https://yandex.ru/pogoda/Orenburg</item>                  <item>https://yandex.ru/pogoda/Kemerovo</item>
+       <item>https://yandex.ru/pogoda/Novokuznetsk</item>              <item>https://yandex.ru/pogoda/Ryazan</item>
+       <item>https://yandex.ru/pogoda/Naberezhnie-Chelny</item>        <item>https://yandex.ru/pogoda/Astrakhan</item>
+       <item>https://yandex.ru/pogoda/Penza</item>                     <item>https://yandex.ru/pogoda/Kirov</item>
+       <item>https://yandex.ru/pogoda/Lipetsk</item>                   <item>https://yandex.ru/pogoda/Cheboksary</item>
+       <item>https://yandex.ru/pogoda/Stavropol</item>                 <item>https://yandex.ru/pogoda/Sevastopol</item>
+       <item>https://yandex.ru/pogoda/Ulan-Ude</item>                  <item>https://yandex.ru/pogoda/Magnitogorsk</item>
+       <item>https://yandex.ru/pogoda/Bryansk</item>                   <item>https://yandex.ru/pogoda/Belgorod</item>
+       <item>https://yandex.ru/pogoda/Surgut</item>                    <item>https://yandex.ru/pogoda/Chita</item>
+       <item>https://yandex.ru/pogoda/Nizhniy-Tagil</item>             <item>https://yandex.ru/pogoda/Arkhangelsk</item>
+       <item>https://yandex.ru/pogoda/Simferopol</item>                <item>https://yandex.ru/pogoda/Kaluga</item>
+       <item>https://yandex.ru/pogoda/Smolensk</item>                  <item>https://yandex.ru/pogoda/Yakutsk</item>
+       <item>https://yandex.ru/pogoda/Saransk</item>                   <item>https://yandex.ru/pogoda/Orel</item>
+       <item>https://yandex.ru/pogoda/Podolsk</item>                   <item>https://yandex.ru/pogoda/Grozniy</item>
+       <item>https://yandex.ru/pogoda/Vladikavkaz</item>               <item>https://yandex.ru/pogoda/Murmansk</item>
+       <item>https://yandex.ru/pogoda/Tambov</item>                    <item>https://yandex.ru/pogoda/Belgorod</item>
+       <item>https://yandex.ru/pogoda/Yoshkar-Ola</item>               <item>https://yandex.ru/pogoda/Taganrog</item>
+       <item>https://yandex.ru/pogoda/Nizhnekamsk</item>               <item>https://yandex.ru/pogoda/Komsomolk-at-Amur</item>
+       <item>https://yandex.ru/pogoda/Tyumen</item>                    <item>https://yandex.ru/pogoda/Sakhalinsk</item>
+    </string-array>
+    
 </resources>

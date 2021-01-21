@@ -5,6 +5,7 @@
         <item name="colorPrimary">@color/button_color</item>
         <item name="colorPrimaryVariant">@color/button_highlight_color</item>
         <item name="colorOnPrimary">@color/text_color</item>
+        <item name="android:textColorPrimary">@color/text_color</item>
 
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/button_color</item>
@@ -15,15 +16,15 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="SpinnerStyle" parent="Widget.AppCompat.Spinner.DropDown">
-        <item name="android:textColor">@color/text_color</item>
-        <item name="fontFamily">sans-serif-condensed-light</item>
-        <item name="android:textSize">18sp</item>
-    </style>
+<!--    <style name="SpinnerStyle" parent="Widget.AppCompat.Spinner.DropDown">-->
+<!--        <item name="android:textColor">@color/text_color</item>-->
+<!--        <item name="fontFamily">sans-serif-condensed-light</item>-->
+<!--        <item name="android:textSize">18sp</item>-->
+<!--    </style>-->
 
-    <style name="ActionBar" parent="Widget.AppCompat.ActionBar">
-        <item name="android:textColor">@color/text_color</item>
-        <item name="fontFamily">sans-serif-condensed-light</item>
-        <item name="android:textSize">24sp</item>
-    </style>
+<!--    <style name="ActionBar" parent="Widget.AppCompat.ActionBar">-->
+<!--        <item name="android:textColor">@color/text_color</item>-->
+<!--        <item name="fontFamily">sans-serif-condensed-light</item>-->
+<!--        <item name="android:textSize">24sp</item>-->
+<!--    </style>-->
 </resources>

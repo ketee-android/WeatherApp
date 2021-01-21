@@ -7,344 +7,49 @@
     android:background="@color/background_color"
     tools:context=".MainActivity">
 
-  <TextView
-      android:id="@+id/appNameView"
+  <ScrollView
       android:layout_width="match_parent"
-      android:layout_height="49dp"
-      android:fontFamily="sans-serif-condensed-light"
-      android:text="@string/app_name"
-      android:textAlignment="center"
-      android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-      android:textColor="@color/text_color"
-      android:textSize="36sp"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.5"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintVertical_bias="0.092" />
+      android:layout_height="match_parent"
+      tools:layout_editor_absoluteX="237dp"
+      tools:layout_editor_absoluteY="267dp">
 
-  <TextView
-      android:id="@+id/dayTempView"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginStart="48dp"
-      android:layout_marginBottom="40dp"
-      android:fontFamily="sans-serif-condensed-light"
-      android:gravity="center"
-      android:text="@string/day_weather"
-      android:textColor="@color/text_color"
-      android:textSize="30sp"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/appNameView"
-      app:layout_constraintVertical_bias="0.737" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-  <TextView
-      android:id="@+id/dayDegreesView"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginStart="8dp"
-      android:layout_marginBottom="40dp"
-      android:fontFamily="sans-serif-condensed-light"
-      android:gravity="center"
-      android:paddingEnd="5dp"
-      android:text="@string/default_day_temp"
-      android:textColor="@color/text_color"
-      android:textSize="30sp"
-      app:layout_constraintBottom_toBottomOf="@+id/dayTempView"
-      app:layout_constraintEnd_toStartOf="@+id/dayTempView"
-      app:layout_constraintHorizontal_bias="0.0"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="@+id/dayTempView"
-      app:layout_constraintVertical_bias="0.0"
-      tools:ignore="RtlSymmetry" />
+      <fragment
+          android:id="@+id/appNameFragment"
+          android:name="com.ketee_jishs.weather_application.AppNameFragment"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginHorizontal="10dp"
+          android:layout_marginVertical="6dp" />
 
-  <TextView
-      android:id="@+id/nightDegreesView"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:fontFamily="sans-serif-condensed-light"
-      android:gravity="center"
-      android:paddingEnd="5dp"
-      android:text="@string/default_night_temp"
-      android:textColor="@color/text_color"
-      android:textSize="20sp"
-      app:layout_constraintBottom_toBottomOf="@+id/nightTempView"
-      app:layout_constraintEnd_toStartOf="@+id/nightTempView"
-      app:layout_constraintHorizontal_bias="0.0"
-      app:layout_constraintStart_toStartOf="@+id/dayDegreesView"
-      app:layout_constraintTop_toTopOf="@+id/nightTempView"
-      app:layout_constraintVertical_bias="0.0"
-      tools:ignore="RtlSymmetry" />
+      <fragment
+          android:id="@+id/chosenCityFragment"
+          android:name="com.ketee_jishs.weather_application.ForecastForCityFragment"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginHorizontal="10dp"
+          android:layout_marginVertical="6dp" />
 
-  <TextView
-      android:id="@+id/nightTempView"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:fontFamily="sans-serif-condensed-light"
-      android:gravity="center"
-      android:text="@string/night_weather"
-      android:textColor="@color/text_color"
-      android:textSize="20sp"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toEndOf="@+id/dayTempView"
-      app:layout_constraintHorizontal_bias="0.186"
-      app:layout_constraintStart_toStartOf="@+id/dayDegreesView"
-      app:layout_constraintTop_toBottomOf="@+id/dayTempView"
-      app:layout_constraintVertical_bias="0.166" />
+      <fragment
+          android:id="@+id/temperatureFragment"
+          android:name="com.ketee_jishs.weather_application.TemperatureFragment"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginHorizontal="10dp"
+          android:layout_marginVertical="6dp" />
 
-  <TextView
-      android:id="@+id/atmospherePressureIndicatorView"
-      android:layout_width="wrap_content"
-      android:layout_height="40dp"
-      android:fontFamily="sans-serif-condensed-light"
-      android:gravity="center"
-      android:text="@string/pressure_indicator"
-      android:textColor="@color/text_color"
-      android:textSize="16sp"
-      app:layout_constraintBottom_toBottomOf="@+id/atmospherePressureInfoView"
-      app:layout_constraintEnd_toEndOf="@+id/cityButton2"
-      app:layout_constraintHorizontal_bias="0.0"
-      app:layout_constraintStart_toEndOf="@+id/atmospherePressureInfoView"
-      app:layout_constraintTop_toTopOf="@+id/atmospherePressureInfoView"
-      app:layout_constraintVertical_bias="0.0" />
-
-  <TextView
-      android:id="@+id/windSpeedIndicatorView"
-      android:layout_width="wrap_content"
-      android:layout_height="40dp"
-      android:fontFamily="sans-serif-condensed-light"
-      android:gravity="center"
-      android:text="@string/wind_speed_indicator"
-      android:textColor="@color/text_color"
-      android:textSize="16sp"
-      app:layout_constraintBottom_toBottomOf="@+id/windSpeedMainView"
-      app:layout_constraintEnd_toEndOf="@+id/atmospherePressureIndicatorView"
-      app:layout_constraintHorizontal_bias="0.0"
-      app:layout_constraintStart_toEndOf="@+id/windSpeedInfoView"
-      app:layout_constraintTop_toBottomOf="@+id/atmospherePressureMainView"
-      app:layout_constraintVertical_bias="0.0" />
-
-  <TextView
-      android:id="@+id/humidityIndicatorView"
-      android:layout_width="wrap_content"
-      android:layout_height="40dp"
-      android:fontFamily="sans-serif-condensed-light"
-      android:gravity="center"
-      android:text="@string/humidity_indicator"
-      android:textColor="@color/text_color"
-      android:textSize="16sp"
-      app:layout_constraintBottom_toBottomOf="@+id/humidityInfoView"
-      app:layout_constraintStart_toEndOf="@+id/humidityInfoView"
-      app:layout_constraintTop_toBottomOf="@+id/windSpeedInfoView" />
-
-  <TextView
-      android:id="@+id/atmospherePressureMainView"
-      android:layout_width="wrap_content"
-      android:layout_height="40dp"
-      android:layout_marginStart="260dp"
-      android:fontFamily="sans-serif-condensed-light"
-      android:gravity="center"
-      android:text="@string/pressure_view"
-      android:textColor="@color/text_color"
-      android:textSize="16sp"
-      android:visibility="visible"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintStart_toEndOf="@+id/dayTempView"
-      app:layout_constraintTop_toTopOf="@+id/dayTempView"
-      app:layout_constraintVertical_bias="0.0" />
-
-  <TextView
-      android:id="@+id/forecastForCityView"
-      android:layout_width="wrap_content"
-      android:layout_height="42dp"
-      android:fontFamily="sans-serif-condensed-light"
-      android:gravity="center"
-      android:text="@string/forecast_text"
-      android:textColor="@color/text_color"
-      android:textSize="16sp"
-      app:layout_constraintBottom_toTopOf="@+id/dayTempView"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.0"
-      app:layout_constraintStart_toStartOf="@+id/settingsButton"
-      app:layout_constraintTop_toBottomOf="@+id/appNameView"
-      app:layout_constraintVertical_bias="0.039" />
-
-  <TextView
-      android:id="@+id/chosenCityView"
-      android:layout_width="wrap_content"
-      android:layout_height="42dp"
-      android:fontFamily="sans-serif-condensed-light"
-      android:gravity="center"
-      android:text="@string/moscow"
-      android:textColor="@color/text_color"
-      android:textSize="16sp"
-      app:layout_constraintBottom_toBottomOf="@+id/forecastForCityView"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.0"
-      app:layout_constraintStart_toEndOf="@+id/forecastForCityView"
-      app:layout_constraintTop_toTopOf="@+id/forecastForCityView"
-      app:layout_constraintVertical_bias="0.0" />
-
-  <TextView
-      android:id="@+id/windSpeedMainView"
-      android:layout_width="wrap_content"
-      android:layout_height="40dp"
-      android:fontFamily="sans-serif-condensed-light"
-      android:gravity="center"
-      android:text="@string/wind_speed_view"
-      android:textColor="@color/text_color"
-      android:textSize="16sp"
-      app:layout_constraintEnd_toEndOf="@+id/atmospherePressureMainView"
-      app:layout_constraintHorizontal_bias="0.0"
-      app:layout_constraintStart_toStartOf="@+id/atmospherePressureMainView"
-      app:layout_constraintTop_toBottomOf="@+id/atmospherePressureMainView" />
-
-  <TextView
-      android:id="@+id/humidityMainView"
-      android:layout_width="wrap_content"
-      android:layout_height="40dp"
-      android:fontFamily="sans-serif-condensed-light"
-      android:gravity="center"
-      android:text="@string/humidity_view"
-      android:textColor="@color/text_color"
-      android:textSize="16sp"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toEndOf="@+id/windSpeedMainView"
-      app:layout_constraintHorizontal_bias="0.0"
-      app:layout_constraintStart_toStartOf="@+id/windSpeedMainView"
-      app:layout_constraintTop_toBottomOf="@+id/windSpeedMainView"
-      app:layout_constraintVertical_bias="0.0" />
-
-  <TextView
-      android:id="@+id/atmospherePressureInfoView"
-      android:layout_width="wrap_content"
-      android:layout_height="40dp"
-      android:fontFamily="sans-serif-condensed-light"
-      android:gravity="center"
-      android:paddingStart="5dp"
-      android:paddingEnd="5dp"
-      android:text="@string/default_atmosphere_pressure"
-      android:textAlignment="center"
-      android:textColor="@color/text_color"
-      android:textSize="16sp"
-      app:layout_constraintBottom_toBottomOf="@+id/atmospherePressureMainView"
-      app:layout_constraintStart_toEndOf="@+id/atmospherePressureMainView"
-      app:layout_constraintTop_toTopOf="@+id/atmospherePressureMainView" />
-
-  <TextView
-      android:id="@+id/windSpeedInfoView"
-      android:layout_width="wrap_content"
-      android:layout_height="40dp"
-      android:fontFamily="sans-serif-condensed-light"
-      android:gravity="center"
-      android:paddingStart="5dp"
-      android:paddingEnd="5dp"
-      android:text="@string/default_wind_speed"
-      android:textAlignment="center"
-      android:textColor="@color/text_color"
-      android:textSize="16sp"
-      app:layout_constraintBottom_toBottomOf="@+id/windSpeedMainView"
-      app:layout_constraintStart_toEndOf="@+id/windSpeedMainView"
-      app:layout_constraintTop_toBottomOf="@+id/atmospherePressureMainView" />
-
-  <TextView
-      android:id="@+id/humidityInfoView"
-      android:layout_width="wrap_content"
-      android:layout_height="40dp"
-      android:fontFamily="sans-serif-condensed-light"
-      android:gravity="center"
-      android:paddingStart="5dp"
-      android:paddingEnd="5dp"
-      android:text="@string/default_humidity"
-      android:textAlignment="center"
-      android:textColor="@color/text_color"
-      android:textSize="16sp"
-      app:layout_constraintBottom_toBottomOf="@+id/humidityMainView"
-      app:layout_constraintStart_toEndOf="@+id/humidityMainView"
-      app:layout_constraintTop_toTopOf="@+id/humidityMainView" />
-
-  <Button
-      android:id="@+id/weekWeatherButton"
-      android:layout_width="wrap_content"
-      android:layout_height="38dp"
-      android:backgroundTint="@color/button_color"
-      android:backgroundTintMode="src_atop"
-      android:fontFamily="sans-serif-condensed"
-      android:gravity="center"
-      android:onClick="onClickWeekWeather"
-      android:text="@string/week_weather_button"
-      android:textAllCaps="false"
-      android:textColor="@color/text_color"
-      android:textColorHighlight="@color/button_highlight_color"
-      android:textColorLink="@color/purple_200"
-      android:textCursorDrawable="@color/text_color"
-      android:textSize="14sp"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toEndOf="@+id/nightTempView"
-      app:layout_constraintHorizontal_bias="0.0"
-      app:layout_constraintStart_toStartOf="@+id/nightDegreesView"
-      app:layout_constraintTop_toBottomOf="@+id/nightTempView"
-      app:layout_constraintVertical_bias="0.448" />
-
-  <Button
-      android:id="@+id/cityButton"
-      android:layout_width="wrap_content"
-      android:layout_height="38dp"
-      android:layout_marginEnd="6dp"
-      android:backgroundTint="@color/button_color"
-      android:backgroundTintMode="src_atop"
-      android:fontFamily="sans-serif-condensed"
-      android:gravity="center"
-      android:onClick="onClickSetCity"
-      android:text="@string/chose_city_button"
-      android:textAllCaps="false"
-      android:textColor="@color/text_color"
-      android:textColorHighlight="@color/button_highlight_color"
-      android:textColorLink="@color/purple_200"
-      android:textCursorDrawable="@color/text_color"
-      android:textSize="14sp"
-      app:layout_constraintBottom_toBottomOf="@+id/settingsButton"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="1.0"
-      app:layout_constraintStart_toEndOf="@+id/settingsButton"
-      app:layout_constraintTop_toTopOf="@+id/settingsButton"
-      app:layout_constraintVertical_bias="0.0" />
-
-  <Button
-      android:id="@+id/settingsButton"
-      android:layout_width="wrap_content"
-      android:layout_height="38dp"
-      android:layout_marginStart="6dp"
-      android:backgroundTint="@color/button_color"
-      android:backgroundTintMode="src_atop"
-      android:fontFamily="sans-serif-condensed"
-      android:gravity="center"
-      android:onClick="onClickSettings"
-      android:text="@string/settings_button"
-      android:textAllCaps="false"
-      android:textColor="@color/text_color"
-      android:textColorHighlight="@color/button_highlight_color"
-      android:textColorLink="@color/purple_200"
-      android:textCursorDrawable="@color/text_color"
-      android:textSize="14sp"
-      app:layout_constraintBottom_toTopOf="@+id/appNameView"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.0"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintVertical_bias="0.185" />
-
-  <TextView
-      android:id="@+id/weekWeatherUrlView"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:text="@string/default_week_weather_url"
-      android:visibility="invisible"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toEndOf="@+id/weekWeatherButton"
-      app:layout_constraintStart_toStartOf="@+id/weekWeatherButton"
-      app:layout_constraintTop_toBottomOf="@+id/weekWeatherButton" />
+      <fragment
+          android:id="@+id/additionalParametersFragment"
+          android:name="com.ketee_jishs.weather_application.AdditionalParametersFragment"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginHorizontal="10dp"
+          android:layout_marginVertical="6dp"/>
+    </LinearLayout>
+  </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

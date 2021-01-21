@@ -3,13 +3,10 @@ package com.ketee_jishs.weather_application;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class AboutActivity extends AppCompatActivity{
-
-    private Button okButtonAbout;
+public class AboutActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

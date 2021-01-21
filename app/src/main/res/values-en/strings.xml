@@ -10,13 +10,17 @@
     <string name="pressure_indicator">mmHg</string>
     <string name="wind_speed_indicator">m/s</string>
     <string name="moscow">Moscow</string>
-    <string name="chose_city_button" translatable="false">Change city</string>
+    <string name="chose_city_button">Change city</string>
     <string name="week_weather_button">Weather for week</string>
+    <string name="add_params_text">Additional parameters:</string>
+    <string name="weather_forecast">Weather forecast:</string>
+    <string name="change_params">Change</string>
 
-    <!--    SetCityActivity-->
+    <!--    ChoseCityActivity-->
     <string name="chose_city_screen_name">Chose city</string>
+    <string name="chose_city_fragment">Enter city name:</string>
     <string name="chose_city_text_edit">Enter city name</string>
-    <string name="chose_parameters">Show additionally</string>
+    <string name="chose_parameters">Show additionally:</string>
     <string name="check_box_pressure">Atmosphere pressure</string>
     <string name="check_box_wind_speed">Wind speed</string>
     <string name="check_box_humidity">Air humidity</string>
@@ -26,34 +30,50 @@
 
     <!--  Cities  -->
     <string-array name="cities_array">
-        <item>Moscow</item>
-        <item>Saint Petersburg</item>
-        <item>Anapa</item>
-        <item>Vladivostok</item>
-        <item>Vladimir</item>
-        <item>Volgograd</item>
-        <item>Voronezh</item>
-        <item>Ekaterinburg</item>
-        <item>Kazan</item>
-        <item>Kaliningrad</item>
-        <item>Nizhny Novgorod</item>
-        <item>Novosibirsk</item>
-        <item>Sochi</item>
-        <item>Omsk</item>
-        <item>Rostov-na-Donu</item>
-        <item>Samara</item>
-        <item>Suzdal</item>
-        <item>Tver</item>
-        <item>Ufa</item>
-        <item>Yaroslavl</item>
+        <item>Moscow</item>                     <item>Saint Petersburg</item>
+        <item>Anapa</item>                      <item>Vladivostok</item>
+        <item>Vladimir</item>                   <item>Volgograd</item>
+        <item>Voronezh</item>                   <item>Ekaterinburg</item>
+        <item>Kazan</item>                      <item>Kaliningrad</item>
+        <item>Nizhny Novgorod</item>            <item>Novosibirsk</item>
+        <item>Sochi</item>                      <item>Omsk</item>
+        <item>Rostov-na-Donu</item>             <item>Samara</item>
+        <item>Suzdal</item>                     <item>Tver</item>
+        <item>Ufa</item>                        <item>Chelyabinsk</item>
+        <item>Yaroslavl</item>                  <item>Krasnoyarsk</item>
+        <item>Permian</item>                    <item>Krasnodar</item>
+        <item>Saratov</item>                    <item>Tyumen</item>
+        <item>Tolyatti</item>                   <item>Izhevsk</item>
+        <item>Barnaul</item>                    <item>Ulyanovsk</item>
+        <item>Irkutsk</item>                    <item>Khabarovsk</item>
+        <item>Makhachkala</item>                <item>Tomsk</item>
+        <item>Orenburg</item>                   <item>Kemerovo</item>
+        <item>Novokuznetsk</item>               <item>Ryazan</item>
+        <item>Naberezhnye Chelny</item>         <item>Astrakhan</item>
+        <item>Penza</item>                      <item>Kirov</item>
+        <item>Lipetsk</item>                    <item>Cheboksary</item>
+        <item>Stavropol</item>                  <item>Sevastopol</item>
+        <item>Ulan-Ude</item>                   <item>Magnitogorsk</item>
+        <item>Bryansk</item>                    <item>Belgorod</item>
+        <item>Surgut</item>                     <item>Chita</item>
+        <item>Nizhny Tagil</item>               <item>Arkhangelsk</item>
+        <item>Simferopol</item>                 <item>Kaluga</item>
+        <item>Smolensk</item>                   <item>Yakutsk</item>
+        <item>Saransk</item>                    <item>Orel</item>
+        <item>Podolsk</item>                    <item>Grozny</item>
+        <item>Vladikavkaz</item>                <item>Murmansk</item>
+        <item>Tambov</item>                     <item>Belgorod</item>
+        <item>Yoshkar-Ola</item>                <item>Taganrog</item>
+        <item>Nizhnekamsk</item>                <item>Komsomolk-on-Amur</item>
+        <item>Tyumen</item>                     <item>Yuzhno-Sakhalinsk</item>
     </string-array>
 
     <!--    SettingsActivity-->
     <string name="settings_screen_name">Settings</string>
-    <string name="set_theme">Set theme</string>
+    <string name="set_theme">Chose theme:</string>
     <string name="dark_theme">Dark theme</string>
     <string name="light_theme">Light theme</string>
-    <string name="set_language">Chose interface language</string>
+    <string name="set_language">Chose interface language:</string>
     <string name="en_language">English</string>
     <string name="ru_language">Russian</string>
     <string name="about">About application</string>
