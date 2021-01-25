@@ -7,49 +7,113 @@
     android:background="@color/background_color"
     tools:context=".MainActivity">
 
-  <ScrollView
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      tools:layout_editor_absoluteX="237dp"
-      tools:layout_editor_absoluteY="267dp">
-
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-      <fragment
-          android:id="@+id/appNameFragment"
-          android:name="com.ketee_jishs.weather_application.AppNameFragment"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:layout_marginHorizontal="10dp"
-          android:layout_marginVertical="6dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-      <fragment
-          android:id="@+id/chosenCityFragment"
-          android:name="com.ketee_jishs.weather_application.ForecastForCityFragment"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:layout_marginHorizontal="10dp"
-          android:layout_marginVertical="6dp" />
+            <fragment
+                android:id="@+id/appNameFragment"
+                android:name="com.ketee_jishs.weather_application.AppNameFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="6dp" />
 
-      <fragment
-          android:id="@+id/temperatureFragment"
-          android:name="com.ketee_jishs.weather_application.TemperatureFragment"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:layout_marginHorizontal="10dp"
-          android:layout_marginVertical="6dp" />
+            <fragment
+                android:id="@+id/chosenCityFragment"
+                android:name="com.ketee_jishs.weather_application.ForecastForCityFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="6dp" />
 
-      <fragment
-          android:id="@+id/additionalParametersFragment"
-          android:name="com.ketee_jishs.weather_application.AdditionalParametersFragment"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:layout_marginHorizontal="10dp"
-          android:layout_marginVertical="6dp"/>
-    </LinearLayout>
-  </ScrollView>
+            <fragment
+                android:id="@+id/temperatureFragment"
+                android:name="com.ketee_jishs.weather_application.TemperatureFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="6dp" />
 
+            <FrameLayout
+                android:id="@+id/addParamsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="6dp"
+                android:visibility="gone">
+                <fragment
+                    android:id="@+id/additionalParametersFragment"
+                    android:name="com.ketee_jishs.weather_application.AdditionalParametersFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </FrameLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="6dp"
+                android:background="@drawable/rounded_border">
+
+                <TextView
+                    android:id="@+id/titleRecyclerView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:text="@string/weather_week_forecast"
+                    android:textColor="@color/second_text_color"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <View
+                    android:id="@+id/line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginHorizontal="6dp"
+                    android:background="@color/second_text_color"
+                    app:layout_constraintBottom_toTopOf="@+id/nestedScroll"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/titleRecyclerView"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <androidx.core.widget.NestedScrollView
+                    android:id="@+id/nestedScroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginBottom="20dp"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/titleRecyclerView"
+                    app:layout_constraintVertical_bias="1.0">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recViewWeather"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false"/>
+                </androidx.core.widget.NestedScrollView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

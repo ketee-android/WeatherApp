@@ -1,5 +1,7 @@
 package com.ketee_jishs.weather_application;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -15,8 +17,10 @@ import androidx.fragment.app.Fragment;
 import java.util.Locale;
 
 public class SetLanguageFragment extends Fragment {
-    private Configuration config = new Configuration();
-    private Locale locale;
+    public static int flag = 0;
+
+    private Configuration config;
+    private Locale lang;
 
     static RadioGroup radioGroupLanguage;
     static RadioButton radioButtonRussianLang;
@@ -29,26 +33,49 @@ public class SetLanguageFragment extends Fragment {
         radioGroupLanguage = rootView.findViewById(R.id.radioGroupLanguage);
         radioButtonRussianLang = rootView.findViewById(R.id.radioButtonRussianLang);
         radioButtonEnglishLang = rootView.findViewById(R.id.radioButtonEnglishLang);
+        config = new Configuration();
         return rootView;
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-//        initLanguageListener();
+        if (flag == 1) {
+            radioButtonRussianLang.setChecked(true);
+        } else if (flag == 2) {
+            radioButtonEnglishLang.setChecked(true);
+        }
+
+        initLanguageListener();
     }
 
-//    private void initLanguageListener() {
-//        radioGroupLanguage.setOnCheckedChangeListener((group, checkedId) -> {
-//            if (radioButtonRussianLang.isChecked()) {
-//                locale = new Locale("ru");
-//            }
-//            if (radioButtonEnglishLang.isChecked()) {
-//                locale = new Locale("en");
-//            }
-//            Locale.setDefault(locale);
-//            config.locale = locale;
-//            getActivity().getResources().updateConfiguration(config, getActivity().getResources().getDisplayMetrics());
-//        });
-//    }
+    @Override
+    public void onStart() {
+        SharedPreferences sharedPreferences = getActivity().getSharedPreferences("selectedLanguage", Context.MODE_PRIVATE);
+        String languageToLoad = sharedPreferences.getString("language", "ru");
+        Locale locale = new Locale(languageToLoad);
+        Locale.setDefault(locale);
+        Configuration configuration = new Configuration();
+        configuration.locale = locale;
+        getActivity().getResources().updateConfiguration(configuration, getActivity().getResources().getDisplayMetrics());
+        super.onStart();
+    }
+
+    private void initLanguageListener() {
+        radioGroupLanguage.setOnCheckedChangeListener((group, checkedId) -> {
+            switch (checkedId) {
+                case R.id.radioButtonRussianLang:
+                    flag = 1;
+                    lang = new Locale("ru");
+                    break;
+                case R.id.radioButtonEnglishLang:
+                    flag = 2;
+                    lang = new Locale("en");
+                    break;
+            }
+            Locale.setDefault(lang);
+            config.locale = lang;
+            getActivity().getResources().updateConfiguration(config, getActivity().getResources().getDisplayMetrics());
+        });
+    }
 }

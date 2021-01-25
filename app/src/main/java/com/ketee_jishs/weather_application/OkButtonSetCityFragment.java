@@ -20,13 +20,14 @@ public class OkButtonSetCityFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_ok_button_set_city, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_ok_button_set_city, container, false);
+        okButtonSetCity = rootView.findViewById(R.id.okButtonSetCity);
+        return rootView;
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        okButtonSetCity = view.findViewById(R.id.okButtonSetCity);
 
         final Animation animAlpha = AnimationUtils.loadAnimation(getContext(), R.anim.alpha);
         okButtonSetCity.setOnClickListener(v -> {
@@ -39,10 +40,18 @@ public class OkButtonSetCityFragment extends Fragment {
         ChoseAdditionalPapamsFragment.onClickAtmospherePressureCheckBox();
         ChoseAdditionalPapamsFragment.onClickWindSpeedCheckBox();
         ChoseAdditionalPapamsFragment.onClickAirHumidityCheckBox();
+        ChoseAdditionalPapamsFragment.viewsSettingsForGone();
         String city = ChoseCityFragment.choseCityAutoCompleteTextView.getText().toString();
+        ChoseCityActivity.citiesList.add(city);
+        if (ChoseCityActivity.citiesList.size() > 7) {
+            ChoseCityActivity.citiesList.remove(0);
+        }
         Intent chosenCity = new Intent();
         chosenCity.putExtra(CityDataInterface.chosenCityDataKey(), city);
         getActivity().setResult(getActivity().RESULT_OK, chosenCity);
+
         getActivity().finish();
     }
+
+
 }

@@ -1,31 +1,33 @@
 package com.ketee_jishs.weather_application;
 
-import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import static android.app.Activity.RESULT_OK;
-
 public class ChoseCityFragment extends Fragment {
 
     static AutoCompleteTextView choseCityAutoCompleteTextView;
-    private String[] citiesArray;
+
+    static String[] citiesArray;
     private String[] dayDegreesArray;
     private String[] nightDegreesArray;
     private String[] weekWeatherArray;
     private String[] atmPressureArray;
     private String[] windSpeedArray;
     private String[] humidityArray;
+
     static int pos;
+
+    private TextView setChosenCityTitleTextView;
+    static final String setChosenCityTitleDataKey = "setChosenCityTitleDataKey";
 
     @Nullable
     @Override
@@ -38,10 +40,15 @@ public class ChoseCityFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
         findResources();
         setAdapterChooseCity();
         onCityClickListener();
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        choseCityAutoCompleteTextView.setText(ForecastForCityFragment.chosenCityView.getText().toString());
     }
 
     private void findResources() {
@@ -55,7 +62,7 @@ public class ChoseCityFragment extends Fragment {
     }
 
     public void setAdapterChooseCity() {
-        ArrayAdapter<?> citiesAdapter = ArrayAdapter.createFromResource(getContext(), R.array.cities_array, android.R.layout.simple_spinner_item);
+        ArrayAdapter<?> citiesAdapter = ArrayAdapter.createFromResource(getContext(), R.array.cities_array, R.layout.drop_down_auto_complete);
         choseCityAutoCompleteTextView.setAdapter(citiesAdapter);
     }
 

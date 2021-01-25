@@ -13,7 +13,8 @@
     <string name="chose_city_button">Change city</string>
     <string name="week_weather_button">Weather for week</string>
     <string name="add_params_text">Additional parameters:</string>
-    <string name="weather_forecast">Weather forecast:</string>
+    <string name="weather_today_forecast">Weather forecast for today:</string>
+    <string name="weather_week_forecast">Weather forecast for week:</string>
     <string name="change_params">Change</string>
 
     <!--    ChoseCityActivity-->
@@ -27,6 +28,17 @@
     <string name="list_of_cities">List of cities</string>
     <string name="ok_button">ОК</string>
     <string name="forecast_text">Weather forecast for today in</string>
+    <string name="recycler_title">Previous cities:</string>
+
+    <string-array name="days_of_week">
+        <item>Tomorrow</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+        <item>Sunday</item>
+    </string-array>
 
     <!--  Cities  -->
     <string-array name="cities_array">

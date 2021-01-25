@@ -29,14 +29,13 @@ public class OkButtonSettingsFragment extends Fragment {
         okButtonSettings = view.findViewById(R.id.okButtonSettings);
 
         final Animation animAlpha = AnimationUtils.loadAnimation(getContext(), R.anim.alpha);
-
         okButtonSettings.setOnClickListener(v -> {
             okButtonSettings.startAnimation(animAlpha);
-            onClickOkButtonSettings(okButtonSettings);
+            onClickOkButtonSettings();
         });
     }
 
-    public void onClickOkButtonSettings(View view) {
+    public void onClickOkButtonSettings() {
         startActivity(new Intent(getContext(), MainActivity.class));
     }
 }

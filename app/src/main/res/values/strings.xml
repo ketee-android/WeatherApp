@@ -1,6 +1,8 @@
 <resources>
     <!--    MainActivity-->
     <string name="app_name" translatable="false">Weather App</string>
+    <string name="indicator_with_slash" translatable="false">°C /</string>
+    <string name="indicator" translatable="false">°C</string>
     <string name="day_weather">°C днем</string>
     <string name="night_weather">°C ночью</string>>
     <string name="settings_button">Настройки</string>
@@ -20,8 +22,19 @@
     <string name="week_weather_button">Погода на неделю</string>
     <string name="default_week_weather_url" translatable="false">https://yandex.ru/pogoda/Moscow</string>
     <string name="add_params_text">Дополнительные параметры:</string>
-    <string name="weather_forecast">Прогноз погоды:</string>
+    <string name="weather_today_forecast">Прогноз погоды на сегодня:</string>
+    <string name="weather_week_forecast">Прогноз погоды на неделю:</string>
     <string name="change_params">Настроить</string>
+
+    <string-array name="days_of_week">
+        <item>Завтра</item>
+        <item>Вторник</item>
+        <item>Среда</item>
+        <item>Четверг</item>
+        <item>Пятница</item>
+        <item>Суббота</item>
+        <item>Воскресенье</item>
+    </string-array>
 
     <!--    ChoseCityActivity-->
     <string name="chose_city_screen_name">Выберите город</string>
@@ -34,6 +47,7 @@
     <string name="list_of_cities">Список городов</string>
     <string name="ok_button">ОК</string>
     <string name="forecast_text">Прогноз погоды на сегодня в г.</string>
+    <string name="recycler_title">Ранее выбранные города:</string>
 
     <!--  Cities  -->
     <string-array name="cities_array">
@@ -90,46 +104,46 @@
 
     <!--    DayTempDegrees-->
     <string-array name="day_degrees_array">
-        <item> -11</item>         <item> -2</item>         <item> -17</item>         <item> -3</item> 
-        <item> -25</item>         <item> -13</item>        <item> -15</item>         <item> -14</item> 
-        <item> -6</item>          <item> -19</item>        <item> -18</item>         <item> -1</item> 
-        <item> -7</item>          <item> -22</item>        <item> -9</item>          <item> -21</item> 
-        <item> -12</item>         <item> -10</item>        <item> -20</item>         <item> -4</item> 
-        <item> -11</item>         <item> -2</item>         <item> -17</item>         <item> -3</item> 
-        <item> -25</item>         <item> -13</item>        <item> -15</item>         <item> -14</item> 
-        <item> -6</item>          <item> -19</item>        <item> -18</item>         <item> -1</item> 
-        <item> -7</item>          <item> -22</item>        <item> -9</item>          <item> -21</item> 
-        <item> -12</item>         <item> -10</item>        <item> -20</item>         <item> -4</item> 
-        <item> -11</item>         <item> -2</item>         <item> -17</item>         <item> -3</item> 
-        <item> -25</item>         <item> -13</item>        <item> -15</item>         <item> -14</item> 
-        <item> -6</item>          <item> -19</item>        <item> -18</item>         <item> -1</item> 
-        <item> -7</item>          <item> -22</item>        <item> -9</item>          <item> -21</item> 
-        <item> -12</item>         <item> -10</item>        <item> -20</item>         <item> -4</item> 
-        <item> -18</item>         <item> -1</item>         <item> -7</item>          <item> -22</item> 
-        <item> -9</item>          <item> -21</item>        <item> -12</item>         <item> -10</item> 
-        <item> -20</item>         <item> -4</item>         <item> -22</item>         <item> -10</item>  
+        <item> -11</item>         <item> -2</item>         <item> -17</item>         <item> -3</item>
+        <item> -25</item>         <item> -13</item>        <item> -15</item>         <item> -14</item>
+        <item> -6</item>          <item> -19</item>        <item> -18</item>         <item> -1</item>
+        <item> -7</item>          <item> -22</item>        <item> -9</item>          <item> -21</item>
+        <item> -12</item>         <item> -10</item>        <item> -20</item>         <item> -4</item>
+        <item> -11</item>         <item> -2</item>         <item> -17</item>         <item> -3</item>
+        <item> -25</item>         <item> -13</item>        <item> -15</item>         <item> -14</item>
+        <item> -6</item>          <item> -19</item>        <item> -18</item>         <item> -1</item>
+        <item> -7</item>          <item> -22</item>        <item> -9</item>          <item> -21</item>
+        <item> -12</item>         <item> -10</item>        <item> -20</item>         <item> -4</item>
+        <item> -11</item>         <item> -2</item>         <item> -17</item>         <item> -3</item>
+        <item> -25</item>         <item> -13</item>        <item> -15</item>         <item> -14</item>
+        <item> -6</item>          <item> -19</item>        <item> -18</item>         <item> -1</item>
+        <item> -7</item>          <item> -22</item>        <item> -9</item>          <item> -21</item>
+        <item> -12</item>         <item> -10</item>        <item> -20</item>         <item> -4</item>
+        <item> -18</item>         <item> -1</item>         <item> -7</item>          <item> -22</item>
+        <item> -9</item>          <item> -21</item>        <item> -12</item>         <item> -10</item>
+        <item> -20</item>         <item> -4</item>         <item> -22</item>         <item> -10</item>
     </string-array>
 
     <!--    NightTempDegrees-->
     <string-array name="night_degrees_array">
-        <item>-15</item>         <item>-6</item>         <item>-20</item>         <item>-5</item> 
-        <item>-27</item>         <item>-19</item>        <item>-18</item>         <item>-21</item> 
-        <item>-9</item>          <item>-25</item>        <item>-22</item>         <item>-3</item> 
-        <item>-10</item>         <item>-27</item>        <item>-11</item>         <item>-26</item> 
-        <item>-16</item>         <item>-12</item>        <item>-23</item>         <item>-7</item> 
-        <item>-22</item>         <item>-3</item>         <item>-10</item>         <item>-27</item> 
-        <item>-11</item>         <item>-26</item>        <item>-16</item>         <item>-12</item> 
-        <item>-23</item>         <item>-7</item>         <item>-15</item>         <item>-6</item> 
-        <item>-20</item>         <item>-5</item>         <item>-27</item>         <item>-19</item> 
-        <item>-18</item>         <item>-21</item>        <item>-9</item>          <item>-25</item> 
-        <item>-22</item>         <item>-3</item>         <item>-10</item>         <item>-27</item> 
-        <item>-11</item>         <item>-26</item>        <item>-16</item>         <item>-12</item> 
-        <item>-23</item>         <item>-7</item>         <item>-15</item>         <item>-6</item> 
-        <item>-20</item>         <item>-5</item>         <item>-27</item>         <item>-19</item> 
-        <item>-18</item>         <item>-21</item>        <item>-9</item>          <item>-25</item> 
-        <item>-22</item>         <item>-3</item>         <item>-10</item>         <item>-27</item> 
-        <item>-11</item>         <item>-26</item>        <item>-16</item>         <item>-12</item> 
-        <item>-23</item>         <item>-7</item>         <item>-9</item>          <item>-25</item> 
+        <item>-15</item>         <item>-6</item>         <item>-20</item>         <item>-5</item>
+        <item>-27</item>         <item>-19</item>        <item>-18</item>         <item>-21</item>
+        <item>-9</item>          <item>-25</item>        <item>-22</item>         <item>-3</item>
+        <item>-10</item>         <item>-27</item>        <item>-11</item>         <item>-26</item>
+        <item>-16</item>         <item>-12</item>        <item>-23</item>         <item>-7</item>
+        <item>-22</item>         <item>-3</item>         <item>-10</item>         <item>-27</item>
+        <item>-11</item>         <item>-26</item>        <item>-16</item>         <item>-12</item>
+        <item>-23</item>         <item>-7</item>         <item>-15</item>         <item>-6</item>
+        <item>-20</item>         <item>-5</item>         <item>-27</item>         <item>-19</item>
+        <item>-18</item>         <item>-21</item>        <item>-9</item>          <item>-25</item>
+        <item>-22</item>         <item>-3</item>         <item>-10</item>         <item>-27</item>
+        <item>-11</item>         <item>-26</item>        <item>-16</item>         <item>-12</item>
+        <item>-23</item>         <item>-7</item>         <item>-15</item>         <item>-6</item>
+        <item>-20</item>         <item>-5</item>         <item>-27</item>         <item>-19</item>
+        <item>-18</item>         <item>-21</item>        <item>-9</item>          <item>-25</item>
+        <item>-22</item>         <item>-3</item>         <item>-10</item>         <item>-27</item>
+        <item>-11</item>         <item>-26</item>        <item>-16</item>         <item>-12</item>
+        <item>-23</item>         <item>-7</item>         <item>-9</item>          <item>-25</item>
     </string-array>
 
     <!--    Atmosphere pressure-->
@@ -153,7 +167,7 @@
        <item>750</item>       <item>764</item>       <item>749</item>       <item>754</item>
        <item>748</item>       <item>755</item>       <item>764</item>       <item>763</item>
     </string-array>
-    
+
     <!--    Wind speed-->
     <string-array name="wind_speed_array">
         <item>2</item>        <item>2</item>        <item>1</item>        <item>9</item>
@@ -173,7 +187,7 @@
         <item>2</item>        <item>2</item>        <item>1</item>        <item>9</item>
         <item>5</item>        <item>3</item>        <item>2</item>        <item>2</item>
         <item>0</item>        <item>0</item>        <item>7</item>        <item>4</item>
-        <item>0</item>        <item>0</item>        <item>9</item>        <item>6</item> 
+        <item>0</item>        <item>0</item>        <item>9</item>        <item>6</item>
     </string-array>
 
     <!--    Humidity-->
@@ -237,5 +251,299 @@
        <item>https://yandex.ru/pogoda/Nizhnekamsk</item>               <item>https://yandex.ru/pogoda/Komsomolk-at-Amur</item>
        <item>https://yandex.ru/pogoda/Tyumen</item>                    <item>https://yandex.ru/pogoda/Sakhalinsk</item>
     </string-array>
-    
+
+    <string-array name="tomorrow_day_weather">
+        <item> -23</item>         <item> +7</item>         <item> 0</item>           <item> 0</item>
+        <item> -6</item>          <item> -19</item>        <item> -18</item>         <item> +1</item>
+        <item> -11</item>         <item> -2</item>         <item> -17</item>         <item> -3</item>
+        <item> -26</item>         <item> 0</item>          <item> -9</item>          <item> 0</item>
+        <item> -12</item>         <item> -10</item>        <item> -11</item>         <item> +4</item>
+        <item> -17</item>         <item> -3</item>         <item> -25</item>         <item> -13</item>
+        <item> 0</item>           <item> -14</item>        <item> -11</item>         <item> -9</item>
+        <item> +7</item>          <item> -12</item>        <item> -10</item>         <item> -20</item>
+        <item> -4</item>          <item> +7</item>         <item> +1</item>          <item> -7</item>
+        <item> -22</item>         <item> -2</item>         <item> -17</item>         <item> -3</item>
+        <item> -6</item>          <item> 0</item>          <item> -18</item>         <item> +1</item>
+        <item> +7</item>          <item> -22</item>        <item> -9</item>          <item> -21</item>
+        <item> -12</item>         <item> -10</item>        <item> -7</item>          <item> -22</item>
+        <item> -9</item>          <item> -21</item>        <item> 0</item>           <item> +3</item>
+        <item> -15</item>         <item> -14</item>        <item> +6</item>          <item> -19</item>
+        <item> -18</item>         <item> -1</item>         <item> -7</item>          <item> -22</item>
+        <item> -20</item>         <item> +4</item>         <item> -20</item>         <item> -4</item>
+        <item> -20</item>         <item> -4</item>         <item> -22</item>         <item> -10</item>
+    </string-array>
+
+    <string-array name="tomorrow_night_weather">
+        <item>-18</item>         <item>-21</item>          <item>-21</item>          <item>-9</item>
+        <item>-25</item>         <item>-16</item>          <item>-12</item>          <item>-23</item>
+        <item>-7</item>          <item>-22</item>          <item>-16</item>          <item>-12</item>
+        <item>-3</item>          <item>-10</item>          <item>-27</item>          <item>-11</item>
+        <item>-19</item>         <item>-18</item>          <item>-21</item>          <item>-9</item>
+        <item>-25</item>         <item>-3</item>           <item>-10</item>          <item>-27</item>
+        <item>-11</item>         <item>-7</item>           <item>-27</item>          <item>-11</item>
+        <item>-26</item>         <item>-20</item>          <item>-5</item>           <item>-26</item>
+        <item>-26</item>         <item>-16</item>          <item>-12</item>          <item>-15</item>
+        <item>-6</item>          <item>-20</item>          <item>-5</item>           <item>-27</item>
+        <item>-22</item>         <item>-3</item>           <item>-10</item>          <item>-7</item>
+        <item>-15</item>         <item>-6</item>           <item>-22</item>          <item>-16</item>
+        <item>-12</item>         <item>-23</item>          <item>-27</item>          <item>-19</item>
+        <item>-18</item>         <item>-10</item>          <item>-27</item>          <item>-23</item>
+        <item>-7</item>          <item>-9</item>           <item>-25</item>          <item>-22</item>
+        <item>-11</item>         <item>-26</item>          <item>-23</item>          <item>-15</item>
+        <item>-6</item>          <item>-20</item>          <item>-5</item>           <item>-27</item>
+        <item>-19</item>         <item>-3</item>           <item>-9</item>           <item>-25</item>
+    </string-array>
+
+    <string-array name="tuesday_day_weather">
+        <item> -21</item>         <item> -12</item>         <item> -10</item>        <item> -7</item>
+        <item> -11</item>         <item> -2</item>         <item> -17</item>         <item> -3</item>
+        <item> -26</item>         <item> 0</item>          <item> -9</item>          <item> 0</item>
+        <item> -12</item>         <item> -14</item>        <item> -11</item>         <item> -9</item>
+        <item> +7</item>          <item> -12</item>        <item> -10</item>         <item> -20</item>
+        <item> -4</item>          <item> +7</item>         <item> +1</item>          <item> -10</item>
+        <item> -11</item>         <item> +4</item>         <item> -17</item>         <item> -3</item>
+        <item> -22</item>         <item> -9</item>         <item> -4</item>          <item> -20</item>
+        <item> -4</item>          <item> -22</item>        <item> -10</item>         <item> -13</item>
+        <item> 0</item>           <item> -7</item>         <item> -22</item>         <item> -2</item>
+        <item> -17</item>         <item> -3</item>         <item> -6</item>          <item> -7</item>
+        <item> -22</item>         <item> -20</item>        <item> +4</item>          <item> -20</item>
+        <item> -9</item>          <item> -21</item>        <item> -25</item>         <item> +3</item>
+        <item> -15</item>         <item> -14</item>        <item> +6</item>          <item> -19</item>
+        <item> -18</item>         <item> -1</item>         <item> -25</item>         <item> +7</item>
+        <item> 0</item>           <item> 0</item>          <item> -6</item>          <item> -19</item>
+        <item> -18</item>         <item> +1</item>         <item> +7</item>          <item> 0</item>
+        <item> 0</item>           <item> -18</item>         <item> +1</item>         <item> -22</item>
+    </string-array>
+
+    <string-array name="tuesday_night_weather">
+        <item>-25</item>         <item>-16</item>          <item>-12</item>          <item>-23</item>
+        <item>-25</item>         <item>-3</item>           <item>-10</item>          <item>-27</item>
+        <item>-7</item>          <item>-22</item>          <item>-16</item>          <item>-12</item>
+        <item>-3</item>          <item>-10</item>          <item>-27</item>          <item>-11</item>
+        <item>-19</item>         <item>-18</item>          <item>-21</item>          <item>-9</item>
+        <item>-11</item>         <item>-6</item>           <item>-22</item>          <item>-16</item>
+        <item>-12</item>         <item>-23</item>         <item>-7</item>           <item>-27</item>
+        <item>-26</item>         <item>-20</item>          <item>-5</item>           <item>-26</item>
+        <item>-26</item>         <item>-16</item>          <item>-12</item>          <item>-15</item>
+        <item>-6</item>          <item>-20</item>          <item>-5</item>           <item>-27</item>
+        <item>-22</item>         <item>-3</item>           <item>-10</item>          <item>-7</item>
+        <item>-15</item>         <item>-27</item>          <item>-19</item>          <item>-11</item>
+        <item>-18</item>         <item>-10</item>          <item>-27</item>          <item>-23</item>
+        <item>-7</item>          <item>-9</item>           <item>-25</item>          <item>-22</item>
+        <item>-11</item>         <item>-26</item>          <item>-23</item>          <item>-15</item>
+        <item>-6</item>          <item>-20</item>          <item>-5</item>           <item>-27</item>
+        <item>-19</item>         <item>-3</item>           <item>-9</item>           <item>-25</item>
+        <item>-18</item>         <item>-21</item>          <item>-21</item>          <item>-9</item>
+    </string-array>
+
+    <string-array name="wednesday_day_weather">
+        <item> -11</item>         <item> +4</item>         <item> -17</item>         <item> -3</item>
+        <item> -22</item>         <item> -9</item>         <item> -4</item>          <item> -20</item>
+        <item> -4</item>          <item> -22</item>        <item> -10</item>         <item> -2</item>
+        <item> -7</item>          <item> -22</item>        <item> -20</item>         <item> +4</item>
+        <item> -20</item>         <item> -9</item>         <item> -21</item>         <item> -25</item>
+        <item> +3</item>          <item> -15</item>        <item> -14</item>         <item> +6</item>
+        <item> -19</item>         <item> -18</item>        <item> -1</item>          <item> -13</item>
+        <item> 0</item>           <item> -17</item>        <item> -3</item>          <item> -22</item>
+        <item> -26</item>         <item> 0</item>          <item> -9</item>          <item> 0</item>
+        <item> -17</item>         <item> -3</item>         <item> -6</item>          <item> -7</item>
+        <item> -2</item>          <item> -21</item>        <item> -12</item>         <item> -10</item>
+        <item> -7</item>          <item> +1</item>         <item> +7</item>          <item> 0</item>
+        <item> 0</item>           <item> -18</item>         <item> +1</item>         <item> -22</item>
+        <item> -12</item>         <item> -14</item>        <item> -11</item>         <item> -9</item>
+        <item> +7</item>          <item> -12</item>        <item> -10</item>         <item> -25</item>
+        <item> +7</item>          <item> 0</item>          <item> 0</item>           <item> -6</item>
+        <item> -19</item>         <item> -18</item>        <item> -20</item>         <item> -4</item>
+        <item> +7</item>         <item> +1</item>          <item> -10</item>         <item> -11</item>
+    </string-array>
+
+    <string-array name="wednesday_night_weather">
+        <item>-19</item>         <item>-18</item>          <item>-21</item>          <item>-9</item>
+        <item>-6</item>          <item>-20</item>          <item>-5</item>           <item>-27</item>
+        <item>-25</item>         <item>-16</item>          <item>-12</item>          <item>-23</item>
+        <item>-25</item>         <item>-3</item>           <item>-10</item>          <item>-27</item>
+        <item>-7</item>          <item>-22</item>          <item>-16</item>          <item>-12</item>
+        <item>-3</item>          <item>-10</item>          <item>-27</item>          <item>-11</item>
+        <item>-18</item>         <item>-21</item>          <item>-21</item>          <item>-9</item>
+        <item>-11</item>         <item>-6</item>           <item>-22</item>          <item>-16</item>
+        <item>-12</item>         <item>-23</item>          <item>-7</item>           <item>-27</item>
+        <item>-26</item>         <item>-20</item>          <item>-5</item>           <item>-26</item>
+        <item>-26</item>         <item>-16</item>          <item>-12</item>          <item>-15</item>
+        <item>-19</item>         <item>-3</item>           <item>-9</item>           <item>-25</item>
+        <item>-22</item>         <item>-3</item>           <item>-10</item>          <item>-7</item>
+        <item>-15</item>         <item>-27</item>          <item>-19</item>          <item>-11</item>
+        <item>-18</item>         <item>-10</item>          <item>-27</item>          <item>-23</item>
+        <item>-7</item>          <item>-9</item>           <item>-25</item>          <item>-22</item>
+        <item>-11</item>         <item>-26</item>          <item>-23</item>          <item>-15</item>
+        <item>-6</item>          <item>-20</item>          <item>-5</item>           <item>-27</item>
+    </string-array>
+
+    <string-array name="thursday_day_weather">
+        <item> +4</item>          <item> -12</item>        <item> -10</item>         <item> +2</item>
+        <item> -7</item>          <item> -12</item>        <item> -20</item>         <item> +4</item>
+        <item> -10</item>         <item> -9</item>         <item> -21</item>         <item> -15</item>
+        <item> +3</item>          <item> -15</item>        <item> -11</item>         <item> +4</item>
+        <item> -17</item>         <item> -3</item>         <item> -20</item>         <item> +4</item>
+        <item> +7</item>          <item> +1</item>         <item> -10</item>         <item> -12</item>
+        <item> +1</item>          <item> +7</item>         <item> 0</item>           <item> 0</item>
+        <item> -19</item>         <item> -18</item>        <item> -9</item>          <item> +4</item>
+        <item> -20</item>         <item> -14</item>        <item> +6</item>          <item> -11</item>
+        <item> -9</item>          <item> +7</item>         <item> -12</item>         <item> -18</item>
+        <item> +1</item>          <item> -12</item>        <item> -12</item>         <item> -14</item>
+        <item> -10</item>         <item> -15</item>        <item> +7</item>          <item> 0</item>
+        <item> 0</item>           <item> -6</item>         <item> -19</item>         <item> -18</item>
+        <item> -17</item>         <item> +3</item>         <item> +6</item>          <item> -7</item>
+        <item> +2</item>          <item> -11</item>        <item> +1</item>          <item> -13</item>
+        <item> 0</item>           <item> -17</item>        <item> +3</item>          <item> -12</item>
+        <item> -16</item>         <item> 0</item>          <item> -9</item>          <item> 0</item>
+        <item> -12</item>         <item> -10</item>        <item> -7</item>          <item> -11</item>
+    </string-array>
+
+    <string-array name="thursday_night_weather">
+        <item>-11</item>         <item>-6</item>           <item>-22</item>          <item>-16</item>
+        <item>-19</item>         <item>-18</item>          <item>-21</item>          <item>-9</item>
+        <item>-12</item>         <item>-23</item>          <item>-7</item>           <item>-27</item>
+        <item>-22</item>         <item>-3</item>           <item>-10</item>          <item>-7</item>
+        <item>-6</item>          <item>-20</item>          <item>-5</item>           <item>-27</item>
+        <item>-25</item>         <item>-16</item>          <item>-12</item>          <item>-23</item>
+        <item>-25</item>         <item>-3</item>           <item>-10</item>          <item>-27</item>
+        <item>-26</item>         <item>-20</item>          <item>-5</item>           <item>-26</item>
+        <item>-26</item>         <item>-16</item>          <item>-12</item>          <item>-15</item>
+        <item>-7</item>          <item>-22</item>          <item>-16</item>          <item>-12</item>
+        <item>-3</item>          <item>-10</item>          <item>-27</item>          <item>-11</item>
+        <item>-18</item>         <item>-21</item>          <item>-21</item>          <item>-9</item>
+        <item>-15</item>         <item>-27</item>          <item>-19</item>          <item>-11</item>
+        <item>-19</item>         <item>-3</item>           <item>-9</item>           <item>-25</item>
+        <item>-11</item>         <item>-26</item>          <item>-23</item>          <item>-15</item>
+        <item>-6</item>          <item>-20</item>          <item>-5</item>           <item>-27</item>
+        <item>-18</item>         <item>-10</item>          <item>-27</item>          <item>-23</item>
+        <item>-7</item>          <item>-9</item>           <item>-25</item>          <item>-22</item>
+    </string-array>
+
+    <string-array name="friday_day_weather">
+        <item> -19</item>         <item> -18</item>        <item> -6</item>         <item> -19</item>
+        <item> -18</item>         <item> +1</item>         <item> +7</item>         <item> 0</item>
+        <item> 0</item>           <item> -17</item>        <item> +3</item>         <item> +6</item>
+        <item> -7</item>          <item> +2</item>         <item> -11</item>        <item> +1</item>
+        <item> -13</item>         <item> -12</item>        <item> -3</item>         <item> -20</item>
+        <item> -12</item>         <item> -12</item>        <item> -10</item>        <item> -7</item>
+        <item> -11</item>         <item> -12</item>        <item> -10</item>        <item> +2</item>
+        <item> -7</item>          <item> -15</item>        <item> +7</item>         <item> 0</item>
+        <item> 0</item>           <item> 0</item>          <item> -17</item>        <item> +3</item>
+        <item> -9</item>          <item> +4</item>         <item> -20</item>        <item> +4</item>
+        <item> -12</item>         <item> -16</item>        <item> 0</item>          <item> -9</item>
+        <item> +4</item>          <item> -17</item>        <item> 0</item>          <item> -12</item>
+        <item> -20</item>         <item> +4</item>         <item> -10</item>        <item> -21</item>
+        <item> -15</item>         <item> +3</item>         <item> -15</item>        <item> -11</item>
+        <item> -14</item>         <item> -10</item>        <item> -9</item>         <item> +4</item>
+        <item> -11</item>         <item> -9</item>         <item> +7</item>         <item> +7</item>
+        <item> +1</item>          <item> -10</item>        <item> -12</item>        <item> -14</item>
+        <item> +6</item>         <item> -12</item>         <item> -18</item>        <item> +1</item>
+    </string-array>
+
+    <string-array name="friday_night_weather">
+        <item>-15</item>         <item>-27</item>          <item>-19</item>          <item>-11</item>
+        <item>-3</item>          <item>-10</item>          <item>-27</item>          <item>-11</item>
+        <item>-18</item>         <item>-21</item>          <item>-21</item>          <item>-9</item>
+        <item>-26</item>         <item>-16</item>          <item>-12</item>          <item>-15</item>
+        <item>-7</item>          <item>-22</item>          <item>-16</item>          <item>-12</item>
+        <item>-11</item>         <item>-6</item>           <item>-22</item>          <item>-16</item>
+        <item>-19</item>         <item>-18</item>          <item>-21</item>          <item>-9</item>
+        <item>-12</item>         <item>-23</item>          <item>-7</item>           <item>-27</item>
+        <item>-6</item>          <item>-20</item>          <item>-5</item>           <item>-27</item>
+        <item>-22</item>         <item>-3</item>           <item>-10</item>          <item>-7</item>
+        <item>-6</item>          <item>-20</item>          <item>-5</item>           <item>-27</item>
+        <item>-25</item>         <item>-16</item>          <item>-12</item>          <item>-23</item>
+        <item>-25</item>         <item>-3</item>           <item>-10</item>          <item>-27</item>
+        <item>-26</item>         <item>-20</item>          <item>-5</item>           <item>-26</item>
+        <item>-18</item>         <item>-10</item>          <item>-27</item>          <item>-23</item>
+        <item>-7</item>          <item>-9</item>           <item>-25</item>          <item>-22</item>
+        <item>-19</item>         <item>-3</item>           <item>-9</item>           <item>-25</item>
+        <item>-11</item>         <item>-26</item>          <item>-23</item>          <item>-15</item>
+    </string-array>
+
+    <string-array name="saturday_day_weather">
+        <item> -13</item>         <item> -12</item>        <item> -3</item>         <item> -20</item>
+        <item> -19</item>         <item> -18</item>        <item> -6</item>         <item> -19</item>
+        <item> -12</item>         <item> +4</item>         <item> -17</item>        <item> -12</item>
+        <item> -20</item>         <item> -18</item>        <item> +1</item>         <item> +7</item>
+        <item> 0</item>           <item> 0</item>          <item> -17</item>        <item> +3</item>
+        <item> +6</item>          <item> -7</item>         <item> +2</item>         <item> -21</item>
+        <item> 0</item>           <item> -16</item>        <item> 0</item>          <item> -9</item>
+        <item> -15</item>         <item> +3</item>         <item> -15</item>        <item> -11</item>
+        <item> +1</item>          <item> -12</item>        <item> -18</item>        <item> +1</item>
+        <item> -11</item>         <item> -9</item>         <item> -12</item>        <item> -12</item>
+        <item> -10</item>         <item> -7</item>         <item> +4</item>         <item> -10</item>
+        <item> -11</item>         <item> -11</item>        <item> -12</item>        <item> -10</item>
+        <item> +2</item>          <item> -9</item>         <item> -7</item>         <item> -15</item>
+        <item> +7</item>          <item> 0</item>          <item> 0</item>          <item> 0</item>
+        <item> -17</item>         <item> +3</item>         <item> -14</item>        <item> -10</item>
+        <item> -9</item>          <item> +4</item>         <item> +4</item>         <item> -20</item>
+        <item> +4</item>          <item> -14</item>        <item> +6</item>         <item> +7</item>
+        <item> +7</item>          <item> +1</item>         <item> -10</item>        <item> -12</item>
+    </string-array>
+
+    <string-array name="saturday_night_weather">
+        <item>-22</item>          <item>-16</item>          <item>-12</item>        <item>-11</item>
+        <item>-26</item>          <item>-18</item>          <item>-6</item>         <item>-10</item>
+        <item>-27</item>          <item>-11</item>          <item>-18</item>        <item>-21</item>
+        <item>-21</item>          <item>-9</item>           <item>-26</item>        <item>-16</item>
+        <item>-15</item>          <item>-27</item>          <item>-19</item>        <item>-11</item>
+        <item>-22</item>          <item>-16</item>          <item>-10</item>        <item>-27</item>
+        <item>-3</item>           <item>-10</item>          <item>-7</item>         <item>-6</item>
+        <item>-20</item>          <item>-5</item>           <item>-27</item>        <item>-19</item>
+        <item>-18</item>          <item>-27</item>          <item>-22</item>        <item>-5</item>
+        <item>-25</item>          <item>-16</item>          <item>-12</item>        <item>-23</item>
+        <item>-3</item>           <item>-12</item>          <item>-15</item>        <item>-7</item>
+        <item>-25</item>          <item>-3</item>           <item>-10</item>        <item>-27</item>
+        <item>-26</item>          <item>-20</item>          <item>-23</item>        <item>-7</item>
+        <item>-9</item>           <item>-25</item>          <item>-11</item>        <item>-3</item>
+        <item>-9</item>           <item>-21</item>          <item>-9</item>         <item>-12</item>
+        <item>-26</item>          <item>-23</item>          <item>-15</item>        <item>-25</item>
+        <item>-22</item>          <item>-19</item>          <item>-23</item>        <item>-7</item>
+        <item>-27</item>          <item>-6</item>           <item>-20</item>        <item>-5</item>
+    </string-array>
+
+    <string-array name="sunday_day_weather">
+        <item> -15</item>         <item> +3</item>         <item> -15</item>         <item> -3</item>
+        <item> -20</item>         <item> -20</item>        <item> -18</item>         <item> 0</item>
+        <item> -14</item>         <item> -10</item>        <item> -9</item>          <item> +4</item>
+        <item> +4</item>          <item> -20</item>        <item> +4</item>          <item> -18</item>
+        <item> -6</item>          <item> -19</item>        <item> -12</item>         <item> -14</item>
+        <item> +6</item>          <item> 0</item>          <item> -11</item>         <item> +4</item>
+        <item> -17</item>         <item> -12</item>        <item> -16</item>         <item> 0</item>
+        <item> -9</item>          <item> -11</item>        <item> +3</item>          <item> +7</item>
+        <item> -7</item>          <item> +4</item>         <item> -10</item>         <item> -11</item>
+        <item> -12</item>         <item> -10</item>        <item> -10</item>         <item> -7</item>
+        <item> -15</item>         <item> +7</item>         <item> +1</item>          <item> +7</item>
+        <item> +1</item>          <item> -12</item>        <item> -18</item>         <item> +1</item>
+        <item> -13</item>         <item> -12</item>        <item> -17</item>         <item> +3</item>
+        <item> +6</item>          <item> -7</item>         <item> +2</item>          <item> -21</item>
+        <item> 0</item>           <item> -19</item>        <item> -11</item>         <item> -9</item>
+        <item> -12</item>         <item> -12</item>        <item> +2</item>          <item> -9</item>
+        <item> 0</item>           <item> 0</item>          <item> 0</item>           <item> -17</item>
+        <item> +8</item>          <item> +2</item>         <item> -11</item>         <item> -13</item>
+    </string-array>
+
+    <string-array name="sunday_night_weather">
+        <item>-26</item>          <item>-18</item>          <item>-6</item>         <item>-10</item>
+        <item>-27</item>          <item>-6</item>           <item>-20</item>        <item>-5</item>
+        <item>-21</item>          <item>-9</item>           <item>-26</item>        <item>-16</item>
+        <item>-22</item>          <item>-16</item>          <item>-12</item>        <item>-11</item>
+        <item>-15</item>          <item>-5</item>           <item>-27</item>        <item>-19</item>
+        <item>-18</item>          <item>-27</item>          <item>-22</item>        <item>-5</item>
+        <item>-25</item>          <item>-16</item>          <item>-12</item>        <item>-23</item>
+        <item>-3</item>           <item>-12</item>          <item>-27</item>        <item>-19</item>
+        <item>-22</item>          <item>-16</item>          <item>-10</item>        <item>-27</item>
+        <item>-9</item>           <item>-25</item>          <item>-11</item>        <item>-3</item>
+        <item>-3</item>           <item>-10</item>          <item>-7</item>         <item>-6</item>
+        <item>-27</item>          <item>-11</item>          <item>-18</item>        <item>-21</item>
+        <item>-20</item>          <item>-15</item>          <item>-7</item>         <item>-11</item>
+        <item>-25</item>          <item>-3</item>           <item>-10</item>        <item>-27</item>
+        <item>-26</item>          <item>-20</item>          <item>-23</item>        <item>-7</item>
+        <item>-9</item>           <item>-21</item>          <item>-9</item>         <item>-12</item>
+        <item>-26</item>          <item>-23</item>          <item>-15</item>        <item>-25</item>
+        <item>-22</item>          <item>-19</item>          <item>-23</item>        <item>-7</item>
+    </string-array>
+
 </resources>
