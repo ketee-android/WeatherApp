@@ -26,10 +26,9 @@ public class AppNameFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
-        final Animation animAlpha = AnimationUtils.loadAnimation(getContext(), R.anim.alpha);
         settingsButton = view.findViewById(R.id.settingsButton);
 
+        final Animation animAlpha = AnimationUtils.loadAnimation(getContext(), R.anim.alpha);
         settingsButton.setOnClickListener(v -> {
             settingsButton.startAnimation(animAlpha);
             onClickSettings();

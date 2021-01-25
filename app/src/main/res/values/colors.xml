@@ -7,7 +7,6 @@
     <color name="text_color">#272C39</color>
     <color name="second_text_color">#FF636E87</color>
     <color name="selected_text_color">#FFFAA78D</color>
-    <color name="transparent">#00000000</color>
 
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_700">#FF3700B3</color>

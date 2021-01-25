@@ -16,11 +16,14 @@ import androidx.fragment.app.Fragment;
 public class AboutButtonFragment extends Fragment {
 
     static Button aboutButton;
+    static final String aboutButtonDataKey = "aboutButtonDataKey";
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_about_button, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_about_button, container, false);
+        aboutButton = rootView.findViewById(R.id.aboutButton);
+        return rootView;
     }
 
     @Override
@@ -28,8 +31,6 @@ public class AboutButtonFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         final Animation animAlpha = AnimationUtils.loadAnimation(getContext(), R.anim.alpha);
-        aboutButton = view.findViewById(R.id.aboutButton);
-
         aboutButton.setOnClickListener(v -> {
             aboutButton.startAnimation(animAlpha);
             onClickAboutButton();

@@ -1,7 +1,7 @@
 package com.ketee_jishs.weather_application;
 
+import android.annotation.SuppressLint;
 import android.content.res.Configuration;
-import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,11 +11,11 @@ import android.widget.RadioGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.fragment.app.Fragment;
 
 public class SetThemeFragment extends Fragment {
+    public static int flag = 0;
 
     static RadioGroup radioGroupThemes;
     static RadioButton radioButtonDarkTheme;
@@ -24,29 +24,44 @@ public class SetThemeFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_set_theme, container, false);
+
+        View rootView = inflater.inflate(R.layout.fragment_set_theme, container, false);
+        radioGroupThemes = rootView.findViewById(R.id.radioGroupThemes);
+        radioButtonDarkTheme = rootView.findViewById(R.id.radioButtonDarkTheme);
+        radioButtonLightTheme = rootView.findViewById(R.id.radioButtonLightTheme);
+        return rootView;
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
-        radioGroupThemes = view.findViewById(R.id.radioGroupThemes);
-        radioButtonDarkTheme = view.findViewById(R.id.radioButtonDarkTheme);
-        radioButtonLightTheme = view.findViewById(R.id.radioButtonLightTheme);
-
+        if (flag == 1) {
+            radioButtonDarkTheme.setChecked(true);
+        } else if (flag == 2) {
+            radioButtonLightTheme.setChecked(true);
+        }
         initThemeListener();
     }
 
-    // Работает плохо. Для перезапуска темы надо перезапускать приложение //
-    private void initThemeListener() {
+        @SuppressLint("NonConstantResourceId")
+        private void initThemeListener() {
         radioGroupThemes.setOnCheckedChangeListener((group, checkedId) -> {
-            getActivity().setTheme(checkedId);
-            if (radioButtonLightTheme.isChecked()) {
-                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-            } else if (radioButtonDarkTheme.isChecked()) {
-                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+            switch (checkedId) {
+                case R.id.radioButtonDarkTheme:
+                    flag = 1;
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                    break;
+                case R.id.radioButtonLightTheme:
+                    flag = 2;
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                    break;
+                default:
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
+                    break;
             }
+            Configuration configuration = new Configuration();
+            configuration.uiMode = AppCompatDelegate.getDefaultNightMode();
+            getActivity().getResources().updateConfiguration(configuration, getActivity().getResources().getDisplayMetrics());
         });
     }
 }
