@@ -8,7 +8,7 @@
     tools:context=".SettingsActivity"
     android:id="@+id/coordLayoutSettings">
 
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -57,9 +57,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
                 android:layout_marginTop="6dp"
-                android:layout_marginBottom="60dp"/>
+                android:layout_marginBottom="90dp"/>
         </LinearLayout>
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
 
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/bottomAppBar"
@@ -67,8 +67,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         app:backgroundTint="@color/button_color"
-        app:fabAlignmentMode="center"
+        app:fabAlignmentMode="end"
         app:hideOnScroll="true"
+        app:layout_scrollFlags="scroll|enterAlways"
         app:contentInsetStart="0dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -96,10 +97,10 @@
                 android:background="@drawable/ic_home_foreground"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/aboutButtonSettings"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="1.0" />
+                app:layout_constraintVertical_bias="0.0" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.bottomappbar.BottomAppBar>
 

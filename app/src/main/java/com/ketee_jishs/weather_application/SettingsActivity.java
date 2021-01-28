@@ -69,6 +69,7 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
                                 startActivity(new Intent(SettingsActivity.this, AboutActivity.class));
                             }
                         });
+                snackbar.setAnchorView(floatingButtonSettings);
                 snackbar.show();
                 break;
             }
@@ -83,6 +84,7 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
                                 startActivity(new Intent(SettingsActivity.this, MainActivity.class));
                             }
                         });
+                snackbar.setAnchorView(floatingButtonSettings);
                 snackbar.show();
                 break;
             }
@@ -97,6 +99,7 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
                                 startActivity(new Intent(SettingsActivity.this, MainActivity.class));
                             }
                         });
+                snackbar.setAnchorView(floatingButtonSettings);
                 snackbar.show();
                 break;
             }
@@ -111,12 +114,14 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
                                 startActivity(new Intent(SettingsActivity.this, AboutActivity.class));
                             }
                         });
+                snackbar.setAnchorView(floatingButtonSettings);
                 snackbar.show();
                 break;
             }
             case R.id.floatingButtonSettings: {
                 Snackbar snackbar = Snackbar
                         .make(coordLayoutSettings, R.string.you_are_in_settings, Snackbar.LENGTH_SHORT);
+                snackbar.setAnchorView(floatingButtonSettings);
                 snackbar.show();
                 break;
             }
