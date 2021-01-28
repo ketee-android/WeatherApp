@@ -1,7 +1,5 @@
 package com.ketee_jishs.weather_application;
 
-import android.annotation.SuppressLint;
-import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,7 +22,6 @@ public class SetThemeFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-
         View rootView = inflater.inflate(R.layout.fragment_set_theme, container, false);
         radioGroupThemes = rootView.findViewById(R.id.radioGroupThemes);
         radioButtonDarkTheme = rootView.findViewById(R.id.radioButtonDarkTheme);
@@ -35,16 +32,23 @@ public class SetThemeFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
         if (flag == 1) {
             radioButtonDarkTheme.setChecked(true);
         } else if (flag == 2) {
             radioButtonLightTheme.setChecked(true);
+        } else {
+            radioButtonLightTheme.setChecked(true);
         }
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
         initThemeListener();
     }
 
-        @SuppressLint("NonConstantResourceId")
-        private void initThemeListener() {
+    void initThemeListener() {
         radioGroupThemes.setOnCheckedChangeListener((group, checkedId) -> {
             switch (checkedId) {
                 case R.id.radioButtonDarkTheme:
@@ -55,13 +59,7 @@ public class SetThemeFragment extends Fragment {
                     flag = 2;
                     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
                     break;
-                default:
-                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
-                    break;
             }
-            Configuration configuration = new Configuration();
-            configuration.uiMode = AppCompatDelegate.getDefaultNightMode();
-            getActivity().getResources().updateConfiguration(configuration, getActivity().getResources().getDisplayMetrics());
         });
     }
 }

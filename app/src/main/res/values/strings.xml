@@ -1,4 +1,19 @@
 <resources>
+    <!--    Snackbar-->
+    <string name="go_to_settings_screen">Перейти на экран настроек?</string>
+    <string name="go_to_main_screen">Вернуться на главный экран?</string>
+    <string name="go_to_chose_city_screen">Изменить город?</string>
+    <string name="go_to_yandex_weather">Показать погоду на неделю?</string>
+    <string name="go_to_about_screen">Посмотреть сведения о приложении?</string>
+    <string name="set_settings">Применить настройки?</string>
+
+    <string name="you_are_in_main">Вы находитесь на главном экране</string>
+    <string name="you_are_in_chose_city">Вы находитесь на экране выбора города</string>
+    <string name="you_are_in_settings">Вы находитесь на экране настроек</string>
+    <string name="you_are_in_about">Вы находитесь на экране сведений о приложении</string>
+
+    <string name="yes">Да</string>
+
     <!--    MainActivity-->
     <string name="app_name" translatable="false">Weather App</string>
     <string name="indicator_with_slash" translatable="false">°C /</string>

@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -19,7 +18,6 @@ public class ChoseAdditionalPapamsFragment extends Fragment {
     static CheckBox checkBoxPressure;
     static CheckBox checkBoxWindSpeed;
     static CheckBox checkBoxAirHumidity;
-    private TextView choseAdditionalPapamsView;
 
     @Nullable
     @Override
@@ -28,7 +26,6 @@ public class ChoseAdditionalPapamsFragment extends Fragment {
         checkBoxPressure = rootView.findViewById(R.id.checkBoxPressure);
         checkBoxWindSpeed = rootView.findViewById(R.id.checkBoxWindSpeed);
         checkBoxAirHumidity = rootView.findViewById(R.id.checkBoxAirHumidity);
-        choseAdditionalPapamsView = rootView.findViewById(R.id.choseAdditionalPapamsView);
         return rootView;
     }
 

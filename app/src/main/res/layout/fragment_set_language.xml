@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -8,15 +7,8 @@
 
     <TextView
         android:id="@+id/setLanguageView"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:layout_marginTop="20dp"
-        android:fontFamily="sans-serif-condensed-light"
-        android:gravity="center"
+        style="@style/HintText"
         android:text="@string/set_language"
-        android:textColor="@color/second_text_color"
-        android:textSize="12sp"
-        android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/line"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -53,27 +45,13 @@
 
         <RadioButton
             android:id="@+id/radioButtonRussianLang"
-            android:layout_width="180dp"
-            android:layout_height="50dp"
-            android:buttonTint="@color/text_color"
-            android:fontFamily="sans-serif-condensed-light"
-            android:text="@string/ru_language"
-            android:textColor="@color/text_color"
-            android:textColorHint="@color/text_color"
-            android:textColorLink="@color/text_color"
-            android:textSize="14sp" />
+            style="@style/CheckBoxAndRadioButton"
+            android:text="@string/ru_language" />
 
         <RadioButton
             android:id="@+id/radioButtonEnglishLang"
-            android:layout_width="180dp"
-            android:layout_height="50dp"
-            android:buttonTint="@color/text_color"
-            android:fontFamily="sans-serif-condensed-light"
-            android:text="@string/en_language"
-            android:textColor="@color/text_color"
-            android:textColorHint="@color/text_color"
-            android:textColorLink="@color/text_color"
-            android:textSize="14sp" />
+            style="@style/CheckBoxAndRadioButton"
+            android:text="@string/en_language" />
     </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

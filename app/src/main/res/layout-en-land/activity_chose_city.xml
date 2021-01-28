@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_color"
-    tools:context=".ChoseCityActivity">
+    tools:context=".ChoseCityActivity"
+    android:id="@+id/coordLayoutChoseCity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -48,16 +49,9 @@
 
                 <TextView
                     android:id="@+id/titleRecyclerView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="30dp"
-                    android:layout_marginStart="6dp"
-                    android:layout_marginTop="20dp"
-                    android:fontFamily="sans-serif-condensed-light"
-                    android:gravity="center"
+                    style="@style/HintText"
                     android:lines="1"
                     android:text="@string/recycler_title"
-                    android:textColor="@color/second_text_color"
-                    android:textSize="12sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
@@ -89,6 +83,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/titleRecyclerView"
                     app:layout_constraintVertical_bias="0.0">
+
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/recViewCity"
                         android:layout_width="match_parent"
@@ -103,7 +98,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
-                android:layout_marginVertical="6dp" />
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="60dp"/>
         </LinearLayout>
     </ScrollView>
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingButtonChoseCity"
+        style="@style/Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/button_color"
+        android:foreground="@drawable/ic_arrow_foreground"
+        app:backgroundTint="@color/text_color" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -5,17 +5,16 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.google.android.material.button.MaterialButton;
+
 public class OkButtonSetCityFragment extends Fragment {
 
-    private Button okButtonSetCity;
+    static MaterialButton okButtonSetCity;
 
     @Nullable
     @Override
@@ -29,11 +28,11 @@ public class OkButtonSetCityFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        final Animation animAlpha = AnimationUtils.loadAnimation(getContext(), R.anim.alpha);
-        okButtonSetCity.setOnClickListener(v -> {
-            okButtonSetCity.startAnimation(animAlpha);
-            onClickOkButtonChoseCity();
-        });
+//        final Animation animAlpha = AnimationUtils.loadAnimation(getContext(), R.anim.alpha);
+//        okButtonSetCity.setOnClickListener(v -> {
+//            okButtonSetCity.startAnimation(animAlpha);
+//            onClickOkButtonChoseCity();
+//        });
     }
 
     public void onClickOkButtonChoseCity() {
@@ -52,6 +51,4 @@ public class OkButtonSetCityFragment extends Fragment {
 
         getActivity().finish();
     }
-
-
 }

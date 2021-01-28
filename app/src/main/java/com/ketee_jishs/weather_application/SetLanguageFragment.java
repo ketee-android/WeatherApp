@@ -1,7 +1,5 @@
 package com.ketee_jishs.weather_application;
 
-import android.content.Context;
-import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -40,25 +38,20 @@ public class SetLanguageFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
         if (flag == 1) {
             radioButtonRussianLang.setChecked(true);
         } else if (flag == 2) {
             radioButtonEnglishLang.setChecked(true);
+        } else {
+            radioButtonRussianLang.setChecked(true);
         }
-
-        initLanguageListener();
     }
 
     @Override
     public void onStart() {
-        SharedPreferences sharedPreferences = getActivity().getSharedPreferences("selectedLanguage", Context.MODE_PRIVATE);
-        String languageToLoad = sharedPreferences.getString("language", "ru");
-        Locale locale = new Locale(languageToLoad);
-        Locale.setDefault(locale);
-        Configuration configuration = new Configuration();
-        configuration.locale = locale;
-        getActivity().getResources().updateConfiguration(configuration, getActivity().getResources().getDisplayMetrics());
         super.onStart();
+        initLanguageListener();
     }
 
     private void initLanguageListener() {

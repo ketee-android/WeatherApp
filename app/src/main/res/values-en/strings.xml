@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--    Snackbar-->
+    <string name="go_to_settings_screen">Go to the settings screen?</string>
+    <string name="go_to_main_screen">Go to main screen?</string>
+    <string name="go_to_chose_city_screen">Change city?</string>
+    <string name="go_to_yandex_weather">Show the weather for the week?</string>
+    <string name="set_settings">Apply settings?</string>
+    <string name="go_to_about_screen">View developer details?</string>
+
+    <string name="you_are_in_main">You are on the home screen</string>
+    <string name="you_are_in_chose_city">You are on the city selection screen</string>
+    <string name="you_are_in_settings">You are in the settings screen</string>
+    <string name="you_are_in_about">You are on the About screen</string>
+
+    <string name="yes">Yes</string>
+
     <!--    MainActivity-->
     <string name="day_weather">°C in the morning</string>
     <string name="night_weather">°C at night</string>

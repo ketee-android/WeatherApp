@@ -1,19 +1,94 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.Weather_Application" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="AppThemeLight" parent="Theme.MaterialComponents.Light">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/button_color</item>
+        <item name="android:navigationBarColor">@color/background_color</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">@color/text_color</item>
+        <item name="colorPrimaryDark">@color/button_highlight_color</item>
+        <item name="android:windowBackground">@color/background_color</item>
+        <item name="android:textColorPrimary">@color/text_color</item>
         <item name="colorPrimaryVariant">@color/button_highlight_color</item>
         <item name="colorOnPrimary">@color/text_color</item>
-        <item name="android:textColorPrimary">@color/text_color</item>
+        <item name="colorAccent">@color/button_highlight_color</item>
 
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/button_color</item>
+        <item name="colorSecondary">@color/button_highlight_color</item>
         <item name="colorSecondaryVariant">@color/background_color</item>
         <item name="colorOnSecondary">@color/text_color</item>
         <item name="android:textColorSecondary">@color/text_color</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/button_highlight_color</item>
         <!-- Customize your theme here. -->
+    </style>
+
+    <style name="AppTheme.NoActionBar" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:navigationBarColor">@color/background_color</item>
+        <item name="toolbarId">@id/toolbar</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">@color/text_color</item>
+        <item name="colorPrimaryDark">@color/button_highlight_color</item>
+        <item name="android:windowBackground">@color/background_color</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="AppTheme.AppBarOverlay" tools:ignore="ResourceCycle">
+        <item name="android:textColorPrimary">@color/text_color</item>
+        <item name="android:textColorSecondary">@color/second_text_color</item>
+        <item name="android:fontFamily">sans-serif-condensed-light</item>
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="AppTheme.PopupOverlay" tools:ignore="ResourceCycle">
+        <item name="android:colorPrimary">@color/button_color</item>
+        <item name="android:colorPrimaryDark">@color/second_text_color</item>
+        <item name="colorAccent">@color/button_color</item>
+    </style>
+
+    <style name="AutoComplete">
+        <item name="colorControlNormal">@color/button_highlight_color</item>
+        <item name="colorControlActivated">@color/button_highlight_color</item>
+    </style>
+
+    <style name="HintText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_marginStart">6dp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:fontFamily">sans-serif-condensed-light</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/second_text_color</item>
+    </style>
+
+    <style name="CheckBoxAndRadioButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">6dp</item>
+        <item name="android:buttonTint">@color/text_color</item>
+        <item name="android:fontFamily">sans-serif-condensed-light</item>
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="TransparentButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:fontFamily">sans-serif-condensed-light</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:backgroundTintMode">src_in</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Button" parent="TransparentButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">35dp</item>
+        <item name="android:layout_marginTop">30dp</item>
+        <item name="android:layout_marginBottom">20dp</item>
+        <item name="android:background">@drawable/rounded_button</item>
+        <item name="android:backgroundTint">@color/button_color</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingVertical" tools:targetApi="o">2dp</item>
+        <item name="android:paddingHorizontal" tools:targetApi="o">15dp</item>
+        <item name="android:shadowColor">@color/fragment_color</item>
+        <item name="android:stateListAnimator">@anim/alpha</item>
     </style>
 </resources>
