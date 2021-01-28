@@ -6,14 +6,13 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+
+import com.google.android.material.button.MaterialButton;
 
 public class TemperatureFragment extends Fragment {
     private final String dayTempDataKey = "dayTempDataKey";
@@ -28,7 +27,7 @@ public class TemperatureFragment extends Fragment {
     static TextView dayDegreesView;
     static TextView nightDegreesView;
     static TextView weekWeatherUrlView;
-    static Button weekWeatherButton;
+    static MaterialButton weekWeatherButton;
 
     static TextView forecastTextView;
     static TextView dayTempView;
@@ -102,11 +101,11 @@ public class TemperatureFragment extends Fragment {
             weekWeatherButton.setText(buttonText);
         }
 
-        final Animation animAlpha = AnimationUtils.loadAnimation(getContext(), R.anim.alpha);
-        weekWeatherButton.setOnClickListener(v -> {
-            weekWeatherButton.startAnimation(animAlpha);
-            onClickWeekWeather();
-        });
+//        final Animation animAlpha = AnimationUtils.loadAnimation(getContext(), R.anim.alpha);
+//        weekWeatherButton.setOnClickListener(v -> {
+//            weekWeatherButton.startAnimation(animAlpha);
+//            onClickWeekWeather();
+//        });
     }
 
     public void onClickWeekWeather() {

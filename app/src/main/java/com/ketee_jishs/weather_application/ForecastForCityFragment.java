@@ -5,14 +5,13 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+
+import com.google.android.material.button.MaterialButton;
 
 import static android.app.Activity.RESULT_OK;
 
@@ -20,7 +19,7 @@ public class ForecastForCityFragment extends Fragment {
     static final String chosenCityViewDataKey = "chosenCityViewDataKey";
 
     static TextView chosenCityView;
-    private Button cityButton;
+    static MaterialButton cityButton;
 
     private final int choseCityActivityRequestCode = 15;
 
@@ -29,14 +28,13 @@ public class ForecastForCityFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_forecast_for_city, container, false);
 
-        cityButton = rootView.findViewById(R.id.cityButton);
         chosenCityView = rootView.findViewById(R.id.chosenCityView);
 
-        final Animation animAlpha = AnimationUtils.loadAnimation(getContext(), R.anim.alpha);
-        cityButton.setOnClickListener(v -> {
-            cityButton.startAnimation(animAlpha);
-            onClickSetCity();
-        });
+//        final Animation animAlpha = AnimationUtils.loadAnimation(getContext(), R.anim.alpha);
+//        cityButton.setOnClickListener(v -> {
+//            cityButton.startAnimation(animAlpha);
+//            onClickSetCity();
+//        });
         return rootView;
     }
 
@@ -51,17 +49,17 @@ public class ForecastForCityFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
+        cityButton = view.findViewById(R.id.cityButton);
         if (savedInstanceState != null) {
             String city = savedInstanceState.getString(chosenCityViewDataKey);
             chosenCityView.setText(city);
         }
     }
 
-    public void onClickSetCity() {
-        Intent chosenCity = new Intent(getActivity(), ChoseCityActivity.class);
-        startActivityForResult(chosenCity, choseCityActivityRequestCode);
-    }
+//    public void onClickSetCity() {
+//        Intent chosenCity = new Intent(getActivity(), ChoseCityActivity.class);
+//        startActivityForResult(chosenCity, choseCityActivityRequestCode);
+//    }
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {

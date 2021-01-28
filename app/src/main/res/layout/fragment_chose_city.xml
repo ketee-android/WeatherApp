@@ -7,48 +7,48 @@
 
     <TextView
         android:id="@+id/setChosenCityTitleTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:layout_marginStart="6dp"
-        android:layout_marginTop="20dp"
-        android:fontFamily="sans-serif-condensed-light"
-        android:gravity="center"
+        style="@style/HintText"
         android:text="@string/chose_city_fragment"
-        android:textColor="@color/second_text_color"
-        android:textSize="12sp"
-        android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/choseCityAutoCompleteTextView"
+        app:layout_constraintBottom_toTopOf="@id/textInputLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
 
-    <AutoCompleteTextView
-        android:id="@+id/choseCityAutoCompleteTextView"
-        android:theme="@style/AutoComplete"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="6dp"
         android:layout_marginBottom="20dp"
-        android:completionThreshold="1"
-        android:dropDownSelector="@color/background_color"
-        android:entries="@array/cities_array"
-        android:fontFamily="sans-serif-condensed-light"
-        android:text="@string/moscow"
-        android:inputType="textCapWords"
-        android:textColor="@color/text_color"
-        android:textColorHighlight="@color/selected_text_color"
-        android:textColorHint="@color/text_color"
-        android:textColorLink="@color/text_color"
-
-        android:textCursorDrawable="@color/text_color"
         android:textSize="18sp"
+        android:theme="@style/AutoComplete"
+        app:boxStrokeColor="@color/button_highlight_color"
+        app:endIconTint="@color/button_highlight_color"
+        app:hintTextColor="@color/button_highlight_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.941"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="1.0"
+        app:startIconTint="@color/button_highlight_color">
 
+        <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+            android:id="@+id/choseCityAutoCompleteTextView"
+            style="@style/AutoComplete"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/transparent_background"
+            android:completionThreshold="1"
+            android:entries="@array/cities_array"
+            android:fontFamily="sans-serif-condensed-light"
+            android:inputType="textCapWords"
+            android:paddingVertical="4dp"
+            android:paddingStart="2dp"
+            android:singleLine="true"
+            android:textColor="@color/text_color"
+            android:textColorHighlight="@color/selected_text_color" />
+    </com.google.android.material.textfield.TextInputLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

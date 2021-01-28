@@ -1,13 +1,9 @@
 package com.ketee_jishs.weather_application;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.widget.ImageButton;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -15,7 +11,6 @@ import androidx.fragment.app.Fragment;
 
 public class AppNameFragment extends Fragment {
 
-    static ImageButton settingsButton;
 
     @Nullable
     @Override
@@ -26,16 +21,5 @@ public class AppNameFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        settingsButton = view.findViewById(R.id.settingsButton);
-
-        final Animation animAlpha = AnimationUtils.loadAnimation(getContext(), R.anim.alpha);
-        settingsButton.setOnClickListener(v -> {
-            settingsButton.startAnimation(animAlpha);
-            onClickSettings();
-        });
-    }
-
-    public void onClickSettings() {
-        startActivity(new Intent(getContext(), SettingsActivity.class));
     }
 }
