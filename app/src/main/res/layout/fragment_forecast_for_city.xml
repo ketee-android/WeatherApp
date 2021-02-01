@@ -31,7 +31,7 @@
         android:fontFamily="sans-serif-condensed-light"
         android:gravity="center"
         android:paddingStart="4dp"
-        android:text="@string/moscow"
+        android:text="@string/default_day_temp"
         android:textColor="@color/text_color"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/forecastForCityView"

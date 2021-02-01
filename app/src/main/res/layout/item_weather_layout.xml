@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/listItemWeatherLayout">
@@ -19,6 +17,7 @@
             android:layout_marginStart="6dp"
             android:fontFamily="sans-serif-condensed-light"
             android:lines="1"
+            android:text="@string/default_day_temp"
             android:paddingVertical="9dp"
             android:textColor="@color/text_color"
             android:textSize="16sp"
@@ -27,8 +26,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.285"
-            tools:text="Завтра" />
+            app:layout_constraintVertical_bias="0.285" />
 
         <TextView
             android:id="@+id/degrDayView"
@@ -39,19 +37,19 @@
             android:paddingVertical="10dp"
             android:textColor="@color/text_color"
             android:textSize="16sp"
+            android:text="@string/default_day_temp"
             app:layout_constraintBottom_toBottomOf="@+id/titleRecyclerView"
             app:layout_constraintEnd_toStartOf="@+id/indicView"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toEndOf="@+id/titleRecyclerView"
             app:layout_constraintTop_toTopOf="@+id/titleRecyclerView"
-            app:layout_constraintVertical_bias="0.0"
-            tools:text="-15" />
+            app:layout_constraintVertical_bias="0.0" />
 
         <TextView
             android:id="@+id/indicView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="50dp"
+            android:layout_marginEnd="6dp"
             android:fontFamily="sans-serif-condensed-light"
             android:lines="1"
             android:paddingVertical="10dp"
@@ -67,42 +65,6 @@
             app:layout_constraintTop_toTopOf="@+id/degrDayView"
             app:layout_constraintVertical_bias="0.0" />
 
-        <TextView
-            android:id="@+id/degrNightView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-condensed-light"
-            android:lines="1"
-            android:paddingVertical="10dp"
-            android:paddingStart="8dp"
-            android:textColor="@color/second_text_color"
-            android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="@+id/indicView"
-            app:layout_constraintEnd_toStartOf="@+id/indicNightView"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/indicView"
-            app:layout_constraintTop_toTopOf="@+id/indicView"
-            tools:text="-15" />
-
-        <TextView
-            android:id="@+id/indicNightView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="6dp"
-            android:fontFamily="sans-serif-condensed-light"
-            android:lines="1"
-            android:paddingVertical="10dp"
-            android:paddingStart="3dp"
-            android:text="@string/indicator"
-            android:textColor="@color/second_text_color"
-            android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="@+id/degrNightView"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/indicView"
-            app:layout_constraintTop_toTopOf="@+id/degrNightView"
-            app:layout_constraintVertical_bias="1.0" />
-
         <View
             android:id="@+id/line"
             android:layout_width="match_parent"
@@ -110,23 +72,10 @@
             android:layout_marginHorizontal="6dp"
             android:background="@color/second_text_color"
             app:layout_constraintBottom_toBottomOf="@+id/titleRecyclerView"
-            app:layout_constraintEnd_toEndOf="@+id/indicNightView"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintEnd_toEndOf="@+id/indicView"
             app:layout_constraintStart_toStartOf="@+id/titleRecyclerView"
             app:layout_constraintTop_toBottomOf="@+id/degrDayView"
             app:layout_constraintVertical_bias="0.0" />
 
-        <View
-            android:id="@+id/lineTwo"
-            android:layout_marginVertical="9dp"
-            android:layout_width="1px"
-            android:layout_height="26dp"
-            android:background="@color/second_text_color"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/degrNightView"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/indicView"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

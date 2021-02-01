@@ -104,7 +104,7 @@ public class ChoseAdditionalPapamsFragment extends Fragment {
     }
 
     static void viewsSettingsForGone() {
-        if (checkBoxPressure.isChecked() == false && checkBoxWindSpeed.isChecked() == false && checkBoxAirHumidity.isChecked() == false) {
+        if (!checkBoxPressure.isChecked() && !checkBoxWindSpeed.isChecked() && !checkBoxAirHumidity.isChecked()) {
             MainActivity.addParamsLayout.setVisibility(View.GONE);
             AdditionalParametersFragment.lineTwo.setVisibility(View.GONE);
             AdditionalParametersFragment.lineThree.setVisibility(View.GONE);

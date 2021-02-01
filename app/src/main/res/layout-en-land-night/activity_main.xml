@@ -27,7 +27,7 @@
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="154dp"
+                android:layout_height="194dp"
                 android:background="@color/background_color"
                 android:fitsSystemWindows="true"
                 android:scaleType="centerCrop"
@@ -39,8 +39,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="?actionBarSize"
                 app:layout_collapseMode="pin"
-                android:paddingStart="42dp"
-                app:popupTheme="@style/AppTheme.PopupOverlay"/>
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                app:subtitleTextColor="@color/text_color"
+                app:titleTextColor="@color/text_color"/>
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbarWithButtons"
@@ -59,7 +60,7 @@
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:layout_marginVertical="10dp"
-                        android:layout_marginEnd="6dp"
+                        android:layout_marginEnd="10dp"
                         android:background="@drawable/settings_button_drawable_night"
                         android:backgroundTint="@null"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -68,26 +69,8 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.384" />
-
-                    <ImageButton
-                        android:id="@+id/aboutMainButton"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_marginVertical="10dp"
-                        android:layout_marginStart="6dp"
-                        android:background="@drawable/ic_info_night"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.0"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.384" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
-
             </androidx.appcompat.widget.Toolbar>
-
-
-
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -138,8 +121,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
-                android:layout_marginTop="6dp"
-                android:layout_marginBottom="60dp"
+                android:layout_marginVertical="6dp"
                 android:background="@drawable/rounded_border">
 
                 <TextView
@@ -160,44 +142,24 @@
                     android:layout_height="1px"
                     android:layout_marginHorizontal="6dp"
                     android:background="@color/second_text_color"
-                    app:layout_constraintBottom_toTopOf="@+id/nestedScroll"
+                    app:layout_constraintBottom_toTopOf="@+id/weatherFive"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="@+id/titleRecyclerView"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="1.0" />
 
-                <androidx.core.widget.NestedScrollView
-                    android:id="@+id/nestedScroll"
+                <fragment
+                    android:id="@+id/weatherFive"
+                    android:name="com.ketee_jishs.weather_application.WeatherFiveDaysFragment"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="20dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/titleRecyclerView"
-                    app:layout_constraintVertical_bias="1.0">
-
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/recViewWeather"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:nestedScrollingEnabled="false" />
-                </androidx.core.widget.NestedScrollView>
+                    app:layout_constraintTop_toBottomOf="@+id/titleRecyclerView" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingButtonMain"
-        style="@style/Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="16dp"
-        android:backgroundTint="@color/button_color"
-        android:foreground="@drawable/ic_arrow_foreground"
-        app:backgroundTint="@color/text_color" />
-
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

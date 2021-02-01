@@ -4,7 +4,7 @@
     android:fontFamily="sans-serif-condensed-light"
     android:id="@+id/drop_down_auto_complete"
     android:layout_height="wrap_content"
-    android:paddingStart="4dp"
+    android:paddingStart="12dp"
     android:layout_width="match_parent"
     android:lines="1"
     android:paddingVertical="4dp"

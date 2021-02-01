@@ -10,6 +10,7 @@
         <item name="colorPrimaryVariant">@color/button_highlight_color</item>
         <item name="colorOnPrimary">@color/text_color</item>
         <item name="colorAccent">@color/button_highlight_color</item>
+        <item name="colorPrimary">@color/button_highlight_color</item>
 
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/button_highlight_color</item>
@@ -42,8 +43,10 @@
     </style>
 
     <style name="AutoComplete">
+        <item name="background">@null</item>
         <item name="colorControlNormal">@color/button_highlight_color</item>
         <item name="colorControlActivated">@color/button_highlight_color</item>
+        <item name="colorPrimary">@color/button_highlight_color</item>
     </style>
 
     <style name="HintText">

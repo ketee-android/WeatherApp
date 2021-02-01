@@ -1,31 +1,19 @@
 <resources>
     <!--    Snackbar-->
-    <string name="go_to_settings_screen">Перейти на экран настроек?</string>
-    <string name="go_to_main_screen">Вернуться на главный экран?</string>
-    <string name="go_to_chose_city_screen">Изменить город?</string>
-    <string name="go_to_yandex_weather">Показать погоду на неделю?</string>
-    <string name="go_to_about_screen">Посмотреть сведения о приложении?</string>
-    <string name="set_settings">Применить настройки?</string>
-
-    <string name="you_are_in_main">Вы находитесь на главном экране</string>
-    <string name="you_are_in_chose_city">Вы находитесь на экране выбора города</string>
-    <string name="you_are_in_settings">Вы находитесь на экране настроек</string>
-    <string name="you_are_in_about">Вы находитесь на экране сведений о приложении</string>
-
-    <string name="yes">Да</string>
+    <string name="city_is_not_exist">Выбранного города не существует</string>
 
     <!--    MainActivity-->
     <string name="app_name" translatable="false">Weather App</string>
     <string name="indicator_with_slash" translatable="false">°C /</string>
     <string name="indicator" translatable="false">°C</string>
-    <string name="day_weather">°C днем</string>
-    <string name="night_weather">°C ночью</string>>
+    <string name="feels_like">Ощущается как:</string>
     <string name="settings_button">Настройки</string>
-    <string name="default_day_temp" translatable="false">-11</string>
-    <string name="default_night_temp" translatable="false">-15</string>
-    <string name="default_atmosphere_pressure" translatable="false">751</string>
-    <string name="default_wind_speed" translatable="false">2</string>
-    <string name="default_humidity" translatable="false">87</string>
+    <string name="max_min_base_temp" translatable="false">--</string>
+    <string name="default_day_temp" translatable="false">--</string>
+    <string name="default_night_temp" translatable="false">--</string>
+    <string name="default_atmosphere_pressure" translatable="false">--</string>
+    <string name="default_wind_speed" translatable="false">--</string>
+    <string name="default_humidity" translatable="false">--</string>
     <string name="pressure_view">Атмосферное давление:</string>
     <string name="wind_speed_view">Скорость ветра:</string>
     <string name="humidity_view">Влажность воздуха:</string>
@@ -37,18 +25,22 @@
     <string name="week_weather_button">Погода на неделю</string>
     <string name="default_week_weather_url" translatable="false">https://yandex.ru/pogoda/Moscow</string>
     <string name="add_params_text">Дополнительные параметры:</string>
-    <string name="weather_today_forecast">Прогноз погоды на сегодня:</string>
-    <string name="weather_week_forecast">Прогноз погоды на неделю:</string>
+    <string name="weather_today_forecast">Прогноз погоды на сегодня (</string>
+    <string name="brace" translatable="false">):</string>
+    <string name="brace_start" translatable="false">(</string>
+    <string name="brace_end" translatable="false">)</string>
+    <string name="weather_week_forecast">Прогноз погоды на пять дней:</string>
     <string name="change_params">Настроить</string>
 
+    <string name="today">Сегодня</string>
+    <string name="tomorrow">Завтра</string>
+
     <string-array name="days_of_week">
+        <item>Сегодня</item>
         <item>Завтра</item>
         <item>Вторник</item>
         <item>Среда</item>
         <item>Четверг</item>
-        <item>Пятница</item>
-        <item>Суббота</item>
-        <item>Воскресенье</item>
     </string-array>
 
     <!--    ChoseCityActivity-->
@@ -102,6 +94,45 @@
         <item>Йошкар-Ола</item>             <item>Таганрог</item>
         <item>Нижнекамск</item>             <item>Комсомольк-на-Амуре</item>
         <item>Тюмень</item>                 <item>Южно-Сахалинск</item>
+    </string-array>
+
+    <string-array name="cities_array_for_openweathermap">
+        <item>Moscow</item>                     <item>Sankt-Peterburg</item>
+        <item>Anapa</item>                      <item>Vladivostok</item>
+        <item>Vladimir</item>                   <item>Volgograd</item>
+        <item>Voronezh</item>                   <item>Ekaterinburg</item>
+        <item>Kazan</item>                      <item>Kaliningrad</item>
+        <item>Nizhny Novgorod</item>            <item>Novosibirsk</item>
+        <item>Sochi</item>                      <item>Omsk</item>
+        <item>Rostov-na-Donu</item>             <item>Samara</item>
+        <item>Suzdal</item>                     <item>Tver</item>
+        <item>Ufa</item>                        <item>Chelyabinsk</item>
+        <item>Yaroslavl</item>                  <item>Krasnoyarsk</item>
+        <item>Perm</item>                       <item>Krasnodar</item>
+        <item>Saratov</item>                    <item>Tyumen</item>
+        <item>Tolyatti</item>                   <item>Izhevsk</item>
+        <item>Barnaul</item>                    <item>Ulyanovsk</item>
+        <item>Irkutsk</item>                    <item>Khabarovsk</item>
+        <item>Makhachkala</item>                <item>Tomsk</item>
+        <item>Orenburg</item>                   <item>Kemerovo</item>
+        <item>Novokuznetsk</item>               <item>Ryazan</item>
+        <item>Naberezhnye Chelny</item>         <item>Astrakhan</item>
+        <item>Penza</item>                      <item>Kirov</item>
+        <item>Lipetsk</item>                    <item>Cheboksary</item>
+        <item>Stavropol</item>                  <item>Sevastopol</item>
+        <item>Ulan-Ude</item>                   <item>Magnitogorsk</item>
+        <item>Bryansk</item>                    <item>Belgorod</item>
+        <item>Surgut</item>                     <item>Chita</item>
+        <item>Nizhny Tagil</item>               <item>Arkhangelsk</item>
+        <item>Simferopol</item>                 <item>Kaluga</item>
+        <item>Smolensk</item>                   <item>Yakutsk</item>
+        <item>Saransk</item>                    <item>Orel</item>
+        <item>Podolsk</item>                    <item>Grozny</item>
+        <item>Vladikavkaz</item>                <item>Murmansk</item>
+        <item>Tambov</item>                     <item>Belgorod</item>
+        <item>Yoshkar-Ola</item>                <item>Taganrog</item>
+        <item>Nizhnekamsk</item>                <item>Komsomolsk-na-Amure</item>
+        <item>Tyumen</item>                     <item>Yuzhno-Sakhalinsk</item>
     </string-array>
 
     <!--    SettingsActivity-->
