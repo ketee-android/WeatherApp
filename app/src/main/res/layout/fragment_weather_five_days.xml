@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/fragment_color"
+    android:id="@+id/weatherFiveDays">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/viewGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/dayOneView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:lines="1"
+            android:paddingVertical="9dp"
+            android:text="@string/default_day_temp"
+            android:textColor="@color/text_color"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.285" />
+
+        <TextView
+            android:id="@+id/degrDayOneView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed-light"
+            android:lines="1"
+            android:paddingVertical="10dp"
+            android:text="@string/default_day_temp"
+            android:textColor="@color/text_color"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/dayOneView"
+            app:layout_constraintEnd_toStartOf="@+id/indicOneView"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/dayOneView"
+            app:layout_constraintTop_toTopOf="@+id/dayOneView"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/descriptionOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:lines="1"
+            android:paddingHorizontal="1dp"
+            android:text="@string/default_day_temp"
+            android:textColor="@color/second_text_color"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/degrDayOneView"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/dayOneView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.615" />
+
+        <TextView
+            android:id="@+id/indicOneView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="6dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:lines="1"
+            android:paddingVertical="10dp"
+            android:paddingStart="5dp"
+            android:paddingEnd="10dp"
+            android:text="@string/indicator"
+            android:textColor="@color/text_color"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/degrDayOneView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/dayOneView"
+            app:layout_constraintTop_toTopOf="@+id/degrDayOneView"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <View
+            android:id="@+id/lineOne"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginHorizontal="6dp"
+            android:background="@color/second_text_color"
+            app:layout_constraintBottom_toBottomOf="@+id/titleRecyclerView"
+            app:layout_constraintEnd_toEndOf="@+id/indicOneView"
+            app:layout_constraintStart_toStartOf="@+id/dayOneView"
+            app:layout_constraintTop_toBottomOf="@+id/degrDayOneView"
+            app:layout_constraintVertical_bias="0.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/viewGroup3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewGroup"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/dayTwoView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:lines="1"
+            android:paddingVertical="9dp"
+            android:text="@string/default_day_temp"
+            android:textColor="@color/text_color"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.285" />
+
+        <TextView
+            android:id="@+id/descriptionTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:lines="1"
+            android:paddingHorizontal="1dp"
+            android:text="@string/default_day_temp"
+            android:textColor="@color/second_text_color"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/degrDayTwoView"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/dayTwoView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.615" />
+
+        <TextView
+            android:id="@+id/degrDayTwoView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed-light"
+            android:lines="1"
+            android:paddingVertical="10dp"
+            android:text="@string/default_day_temp"
+            android:textColor="@color/text_color"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/dayTwoView"
+            app:layout_constraintEnd_toStartOf="@+id/indicTwoView"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/dayTwoView"
+            app:layout_constraintTop_toTopOf="@+id/dayTwoView"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/indicTwoView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="6dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:lines="1"
+            android:paddingVertical="10dp"
+            android:paddingStart="5dp"
+            android:paddingEnd="10dp"
+            android:text="@string/indicator"
+            android:textColor="@color/text_color"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/degrDayTwoView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/dayTwoView"
+            app:layout_constraintTop_toTopOf="@+id/degrDayTwoView"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <View
+            android:id="@+id/lineTwo"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginHorizontal="6dp"
+            android:background="@color/second_text_color"
+            app:layout_constraintBottom_toBottomOf="@+id/titleRecyclerView"
+            app:layout_constraintEnd_toEndOf="@+id/indicTwoView"
+            app:layout_constraintStart_toStartOf="@+id/dayTwoView"
+            app:layout_constraintTop_toBottomOf="@+id/degrDayTwoView"
+            app:layout_constraintVertical_bias="0.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/viewGroup5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewGroup3"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/dayThreeView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:lines="1"
+            android:paddingVertical="9dp"
+            android:text="@string/default_day_temp"
+            android:textColor="@color/text_color"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.285" />
+
+        <TextView
+            android:id="@+id/descriptionThree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:lines="1"
+            android:paddingHorizontal="1dp"
+            android:text="@string/default_day_temp"
+            android:textColor="@color/second_text_color"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/degrDayThreeView"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/dayThreeView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.615" />
+
+        <TextView
+            android:id="@+id/degrDayThreeView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed-light"
+            android:lines="1"
+            android:paddingVertical="10dp"
+            android:text="@string/default_day_temp"
+            android:textColor="@color/text_color"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/dayThreeView"
+            app:layout_constraintEnd_toStartOf="@+id/indicThreeView"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/dayThreeView"
+            app:layout_constraintTop_toTopOf="@+id/dayThreeView"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/indicThreeView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="6dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:lines="1"
+            android:paddingVertical="10dp"
+            android:paddingStart="5dp"
+            android:paddingEnd="10dp"
+            android:text="@string/indicator"
+            android:textColor="@color/text_color"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/degrDayThreeView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/dayThreeView"
+            app:layout_constraintTop_toTopOf="@+id/degrDayThreeView"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <View
+            android:id="@+id/lineThree"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginHorizontal="6dp"
+            android:background="@color/second_text_color"
+            app:layout_constraintBottom_toBottomOf="@+id/titleRecyclerView"
+            app:layout_constraintEnd_toEndOf="@+id/indicThreeView"
+            app:layout_constraintStart_toStartOf="@+id/dayThreeView"
+            app:layout_constraintTop_toBottomOf="@+id/degrDayThreeView"
+            app:layout_constraintVertical_bias="0.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/viewGroup6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewGroup5"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/dayFourView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:lines="1"
+            android:paddingVertical="9dp"
+            android:text="@string/default_day_temp"
+            android:textColor="@color/text_color"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.285" />
+
+        <TextView
+            android:id="@+id/descriptionFour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:lines="1"
+            android:paddingHorizontal="1dp"
+            android:text="@string/default_day_temp"
+            android:textColor="@color/second_text_color"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/degrDayFourView"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/dayFourView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.615" />
+
+        <TextView
+            android:id="@+id/degrDayFourView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed-light"
+            android:lines="1"
+            android:paddingVertical="10dp"
+            android:text="@string/default_day_temp"
+            android:textColor="@color/text_color"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/dayFourView"
+            app:layout_constraintEnd_toStartOf="@+id/indicFourView"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/dayFourView"
+            app:layout_constraintTop_toTopOf="@+id/dayFourView"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/indicFourView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="6dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:lines="1"
+            android:paddingVertical="10dp"
+            android:paddingStart="5dp"
+            android:paddingEnd="10dp"
+            android:text="@string/indicator"
+            android:textColor="@color/text_color"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/degrDayFourView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/dayFourView"
+            app:layout_constraintTop_toTopOf="@+id/degrDayFourView"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <View
+            android:id="@+id/lineFour"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginHorizontal="6dp"
+            android:background="@color/second_text_color"
+            app:layout_constraintBottom_toBottomOf="@+id/titleRecyclerView"
+            app:layout_constraintEnd_toEndOf="@+id/indicFourView"
+            app:layout_constraintStart_toStartOf="@+id/dayFourView"
+            app:layout_constraintTop_toBottomOf="@+id/degrDayFourView"
+            app:layout_constraintVertical_bias="0.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewGroup6"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/dayFiveView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:lines="1"
+            android:paddingVertical="9dp"
+            android:text="@string/default_day_temp"
+            android:textColor="@color/text_color"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.285" />
+
+        <TextView
+            android:id="@+id/descriptionFive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:lines="1"
+            android:paddingHorizontal="1dp"
+            android:text="@string/default_day_temp"
+            android:textColor="@color/second_text_color"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/degrDayFiveView"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/dayFiveView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.615" />
+
+        <TextView
+            android:id="@+id/degrDayFiveView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed-light"
+            android:lines="1"
+            android:paddingVertical="10dp"
+            android:text="@string/default_day_temp"
+            android:textColor="@color/text_color"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/dayFiveView"
+            app:layout_constraintEnd_toStartOf="@+id/indicFiveView"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/dayFiveView"
+            app:layout_constraintTop_toTopOf="@+id/dayFiveView"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/indicFiveView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="6dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:lines="1"
+            android:paddingVertical="10dp"
+            android:paddingStart="5dp"
+            android:paddingEnd="10dp"
+            android:text="@string/indicator"
+            android:textColor="@color/text_color"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/degrDayFiveView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/dayFiveView"
+            app:layout_constraintTop_toTopOf="@+id/degrDayFiveView"
+            app:layout_constraintVertical_bias="0.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

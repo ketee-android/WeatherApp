@@ -5,29 +5,27 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.AutoCompleteTextView;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.google.android.material.textfield.MaterialAutoCompleteTextView;
+
+import java.util.Arrays;
+import java.util.List;
+
 public class ChoseCityFragment extends Fragment {
 
-    static AutoCompleteTextView choseCityAutoCompleteTextView;
+    static MaterialAutoCompleteTextView choseCityAutoCompleteTextView;
 
     static String[] citiesArray;
-    private String[] dayDegreesArray;
-    private String[] nightDegreesArray;
     private String[] weekWeatherArray;
-    private String[] atmPressureArray;
-    private String[] windSpeedArray;
-    private String[] humidityArray;
+
+    static String cityName;
+    static String[] arrayForOpenweathermap;
 
     static int pos;
-
-    private TextView setChosenCityTitleTextView;
-    static final String setChosenCityTitleDataKey = "setChosenCityTitleDataKey";
 
     @Nullable
     @Override
@@ -53,12 +51,8 @@ public class ChoseCityFragment extends Fragment {
 
     private void findResources() {
         citiesArray = getResources().getStringArray(R.array.cities_array);
-        dayDegreesArray = getResources().getStringArray(R.array.day_degrees_array);
-        nightDegreesArray = getResources().getStringArray(R.array.night_degrees_array);
         weekWeatherArray = getResources().getStringArray(R.array.urls_array);
-        atmPressureArray = getResources().getStringArray(R.array.atmosphere_pressure_array);
-        windSpeedArray = getResources().getStringArray(R.array.wind_speed_array);
-        humidityArray = getResources().getStringArray(R.array.humidity_array);
+        arrayForOpenweathermap = getResources().getStringArray(R.array.cities_array_for_openweathermap);
     }
 
     public void setAdapterChooseCity() {
@@ -73,15 +67,19 @@ public class ChoseCityFragment extends Fragment {
             for (int i = 0; i < citiesArray.length; i++) {
                 if (citiesArray[i].equals(selection)) {
                     pos = i;
-                    TemperatureFragment.dayDegreesView.setText(dayDegreesArray[pos]);
-                    TemperatureFragment.nightDegreesView.setText(nightDegreesArray[pos]);
                     TemperatureFragment.weekWeatherUrlView.setText(weekWeatherArray[pos]);
-                    AdditionalParametersFragment.atmospherePressureInfoView.setText(atmPressureArray[pos]);
-                    AdditionalParametersFragment.windSpeedInfoView.setText(windSpeedArray[pos]);
-                    AdditionalParametersFragment.humidityInfoView.setText(humidityArray[pos]);
+                    cityName = arrayForOpenweathermap[pos];
                     break;
                 }
             }
         });
     }
+
+    static boolean isCityExist() {
+        String chosenCity = choseCityAutoCompleteTextView.getText().toString();
+        List<String> citiesList = Arrays.asList(citiesArray);
+        return citiesList.contains(chosenCity);
+    }
+
 }
+

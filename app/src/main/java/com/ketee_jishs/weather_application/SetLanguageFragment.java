@@ -18,7 +18,7 @@ public class SetLanguageFragment extends Fragment {
     public static int flag = 0;
 
     private Configuration config;
-    private Locale lang;
+    static Locale lang = Locale.forLanguageTag("ru");
 
     static RadioGroup radioGroupLanguage;
     static RadioButton radioButtonRussianLang;

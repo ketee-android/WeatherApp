@@ -1,9 +1,12 @@
 package com.ketee_jishs.weather_application;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -26,14 +29,14 @@ public class OkButtonSettingsFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         okButtonSettings = view.findViewById(R.id.okButtonSettings);
 
-//        final Animation animAlpha = AnimationUtils.loadAnimation(getContext(), R.anim.alpha);
-//        okButtonSettings.setOnClickListener(v -> {
-//            okButtonSettings.startAnimation(animAlpha);
-//            onClickOkButtonSettings();
-//        });
+        final Animation animAlpha = AnimationUtils.loadAnimation(getContext(), R.anim.alpha);
+        okButtonSettings.setOnClickListener(v -> {
+            okButtonSettings.startAnimation(animAlpha);
+            onClickOkButtonSettings();
+        });
     }
 
-//    public void onClickOkButtonSettings() {
-//        startActivity(new Intent(getContext(), MainActivity.class));
-//    }
+    public void onClickOkButtonSettings() {
+        startActivity(new Intent(getContext(), MainActivity.class));
+    }
 }

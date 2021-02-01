@@ -10,6 +10,8 @@
         <item name="colorPrimaryVariant">#003373</item>
         <item name="colorOnPrimary">#9CACBF</item>
         <item name="colorAccent">#003373</item>
+        <item name="colorPrimary">#004397</item>
+        <item name="colorOnSurface">#9CACBF</item>
 
         <!-- Secondary brand color. -->
         <item name="colorSecondary">#003373</item>
@@ -23,6 +25,8 @@
     <style name="AutoComplete">
         <item name="colorControlNormal">#003373</item>
         <item name="colorControlActivated">#003373</item>
+        <item name="colorPrimary">#004397</item>
+        <item name="colorOnSurface">#9CACBF</item>
     </style>
 
     <style name="HintText">
